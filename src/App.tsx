@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './sections/Header'
 import Hero from './sections/Hero'
 import Soluctions from './sections/Soluctions'
 import About from './sections/About'
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <Hero />
       <Soluctions />
       <About />

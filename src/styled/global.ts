@@ -17,6 +17,24 @@ const Global = createGlobalStyle`
   body {
     background-color:${p => p.theme.pallete.bodybg};
   }
+
+  @media (max-width:1280px) {
+    html {
+      font-size:8px;
+    }
+  }
+
+  @media (max-width:1080px) {
+    html {
+      font-size:7px;
+    }
+  }
+
+  @media (max-width:940px) {
+    html {
+      font-size:6px;
+    }
+  }
 `
 
 
