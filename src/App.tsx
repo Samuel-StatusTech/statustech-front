@@ -1,11 +1,28 @@
 import React from 'react'
+import Hero from './sections/Hero'
+import Soluctions from './sections/Soluctions'
+import About from './sections/About'
+import Portfolio from './sections/Portfolio'
+import Faq from './sections/Faq'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
-function App() {
+
+const App = () => {
+
+
   return (
-    <div>
-      Hi!
-    </div>
+    <>
+      <Hero />
+      <Soluctions />
+      <About />
+      <Portfolio />
+      <Faq />
+      <Contact />
+      <Footer />
+    </>
   )
+
 }
 
 
