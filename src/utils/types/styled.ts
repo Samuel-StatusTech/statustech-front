@@ -11,6 +11,7 @@ declare module "styled-components" {
     };
     containers: {
       main: string;
+      mobile: string;
     };
   }
 }

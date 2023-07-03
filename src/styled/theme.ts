@@ -9,7 +9,8 @@ const theme: DefaultTheme = {
     primary: 'rgba(255, 255, 255, 1)'
   },
   containers: {
-    main: "65px"
+    main: "65px",
+    mobile: "15px"
   }
 }
 

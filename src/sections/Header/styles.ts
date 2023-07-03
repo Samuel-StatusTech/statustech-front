@@ -8,6 +8,9 @@ export const Section = styled.header`
   display:flex;
   justify-content:space-between;
   align-items:center;
+  background: rgba(23, 25, 26, 1);
+  box-shadow: 0px 100px 250px -50px rgba(0, 214, 238, 1);
+
   svg {
     max-width:270px;
   }
@@ -29,7 +32,7 @@ export const Section = styled.header`
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding:15px;
+    padding:${p=>p.theme.containers.mobile};
   }
 `
 
