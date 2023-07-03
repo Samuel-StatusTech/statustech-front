@@ -19,6 +19,10 @@ const Global = createGlobalStyle`
     background-color:${p => p.theme.pallete.bodybg};
   }
 
+  section {
+    padding:28px ${p => p.theme.containers.main};
+  }
+
   .sectionName {
     font-size:2.8rem;
     line-height:3.78rem;
@@ -26,6 +30,8 @@ const Global = createGlobalStyle`
     background:${p => p.theme.pallete.gradient};
     -webkit-text-fill-color:transparent;
     -webkit-background-clip:text;
+    background-size:inherit;
+    position:absolute;
   }
 
   .sectionTitle {
@@ -33,6 +39,7 @@ const Global = createGlobalStyle`
     line-height:8.64rem;
     color:${p => p.theme.text.primary};
     font-family:Poppins-Bold;
+    margin-top:3.78rem;
   }
 
   .sectionDescription {
@@ -42,55 +49,29 @@ const Global = createGlobalStyle`
   }
 
 
-  // min-widths
-  @media (min-width:1600px) {
-    html { font-size:11px; }
-  }
-
-  @media (min-width:1800px) {
-    html { font-size:13px; }
-  }
-
-  @media (min-width:2400px) {
-    html { font-size:16px; }
-  }
-
+  // big monitors
+  @media (min-width:1600px) { html { font-size:11px; } }
+  @media (min-width:1800px) { html { font-size:13px; } }
+  @media (min-width:2400px) { html { font-size:16px; } }
   
-  // max-widths
-  @media (max-width:1480px) {
-    html { font-size:9px; }
-  }
+  // smaller monitors
+  @media (max-width:1480px) { html { font-size:9px; } }
+  @media (max-width:1080px) { html { font-size:7px; } }
+  @media (min-width:881px) AND (max-width:940px) { html { font-size:6px; } }
 
-  @media (max-width:1080px) {
-    html { font-size:7px; }
-  }
-
-  @media (min-width:881px) AND (max-width:940px) {
-    html { font-size:6px; }
-  }
-
-  @media (max-width:${p=>Sconsts.breakpoints.tablet}px) {
+  // mobile
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
     html { font-size:10px; }
+
+    .sectionName { font-size:2.3rem; line-height:1.55em; }
+    .sectionTitle { font-size:4.8rem; line-height:1.35em; }
   }
 
-  @media (max-width:${p=>Sconsts.breakpoints.cellphone}px) {
+  @media (max-width:644px) { html { font-size:8px; } }
+  @media (max-width:544px) { html { font-size:6px; } }
 
-    .sectionName {
-      font-size:2rem;
-      line-height:3.1rem;
-    }
-  
-    .sectionTitle {
-      font-size:2.8rem;
-      line-height:3.78rem;
-      font-family:Poppins;
-      font-weight:300;
-    }
-  
-    .sectionDescription {
-      font-size:1.6rem;
-      line-height:2.48rem;
-    }
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    section { padding:${p => p.theme.containers.mobile}; }
   }
 `
 
