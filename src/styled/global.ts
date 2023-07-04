@@ -23,11 +23,13 @@ const Global = createGlobalStyle`
   }
 
   section {
-    padding:28px ${p => p.theme.containers.main};
-    margin-top:20rem;
-
     &:nth-child(2) { margin-top:11rem; }
     &:nth-child(3) { margin-top:10rem; }
+  }
+  section,
+  footer {
+    padding:28px ${p => p.theme.containers.main};
+    margin-top:20rem;
   }
 
   .sectionName {
@@ -78,7 +80,7 @@ const Global = createGlobalStyle`
   @media (max-width:544px) { html { font-size:6px; } }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    section { padding:${p => p.theme.containers.mobile}; }
+    section, footer { padding:${p => p.theme.containers.mobile}; }
   }
 `
 

@@ -11,6 +11,10 @@ import { ReactComponent as Aws } from "../../assets/icons/performance.svg"
 import { ReactComponent as AboutBg } from "../../assets/icons/about_bg.svg"
 import { ReactComponent as Bullet } from "../../assets/icons/bullet.svg"
 
+import { ReactComponent as Mail } from "../../assets/icons/mail.svg"
+import { ReactComponent as Phone } from "../../assets/icons/phone.svg"
+import { ReactComponent as Location } from "../../assets/icons/location.svg"
+
 
 export {
   LogoFull,
@@ -23,4 +27,7 @@ export {
   Aws,
   AboutBg,
   Bullet,
+  Mail,
+  Phone,
+  Location,
 }
