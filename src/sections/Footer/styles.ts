@@ -4,7 +4,10 @@ import Sconsts from "../../styled/consts"
 
 
 export const Footer = styled.footer`
-  background-color:${p => p.theme.pallete.darkbg};
+  background-color:${p => p.theme.pallete.darkbg};  
+`
+
+export const Content = styled.div`
   display:flex;
   justify-content:space-between;
 

@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   return (
     <S.Section>
-      <S.Content>
+      <S.Content className='container'>
         <S.Top>
           <S.Titles>
             <h2 className='sectionName'>Portfolio</h2>

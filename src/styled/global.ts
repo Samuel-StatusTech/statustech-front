@@ -32,6 +32,11 @@ const Global = createGlobalStyle`
     margin-top:20rem;
   }
 
+  .container {
+    max-width:1480px;
+    margin:auto;
+  }
+
   .sectionName {
     font-size:2.8rem;
     line-height:3.78rem;
@@ -56,12 +61,6 @@ const Global = createGlobalStyle`
     line-height:3.1rem;
     color: ${p => p.theme.text.lightgrey};
   }
-
-
-  // big monitors
-  @media (min-width:1600px) { html { font-size:11px; } }
-  @media (min-width:1800px) { html { font-size:13px; } }
-  @media (min-width:2400px) { html { font-size:16px; } }
   
   // smaller monitors
   @media (max-width:1480px) { html { font-size:9px; } }

@@ -7,7 +7,7 @@ const Testimonials = () => {
 
   return (
     <S.Section>
-      <S.Content>
+      <S.Content className='container'>
         <S.Top>
           <S.Titles>
             <h2 className='sectionName'>Depoimentos</h2>

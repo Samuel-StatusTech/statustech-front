@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <S.Section>
-      <S.Content>
+      <S.Content className='container'>
         <S.Texts>
           <h2 className='sectionName'>Soluções digitais</h2>
           <h1 className='sectionTitle'>Com a tecnologia que você precisa!</h1>

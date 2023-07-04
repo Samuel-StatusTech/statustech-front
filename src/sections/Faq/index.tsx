@@ -12,7 +12,7 @@ const Faq = () => {
   return (
     <S.Section>
       <FaqBg />
-      <S.Content>
+      <S.Content className='container'>
         <S.Top>
           <S.Titles>
             <h2 className='sectionName'>FAQ</h2>

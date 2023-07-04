@@ -10,7 +10,7 @@ const About = () => {
   return (
     <S.Section>
       <AboutBg />
-      <S.Content>
+      <S.Content className='container'>
         <S.Titles>
           <h2 className='sectionName'>Sobre nós</h2>
           <h1 className='sectionTitle'>Nós entendemos as<br />suas necessidades</h1>

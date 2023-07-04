@@ -6,7 +6,9 @@ const Contact = () => {
 
 
   return (
-    <S.Section>Contact</S.Section>
+    <S.Section>
+      <S.Content className='container'>Contact</S.Content>
+    </S.Section>
   )
 
 }
