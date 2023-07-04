@@ -5,9 +5,10 @@ import Sconsts from "../../styled/consts"
 
 export const Section = styled.section`
   position:relative;
+  padding-bottom:20rem;
 
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    display:none;
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    padding-bottom:10rem;
   }
 `
 
@@ -15,6 +16,10 @@ export const Content = styled.div`
   display:flex;
   flex-direction:column;
   gap:6.5rem;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding-bottom:2.3rem;
+  }
 `
 
 export const Top = styled.div`

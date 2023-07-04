@@ -21,16 +21,10 @@ const Global = createGlobalStyle`
     overflow:hidden;
     position:relative;
   }
-
-  section {
-    &:nth-child(2) { margin-top:11rem; }
-    &:nth-child(3) { margin-top:10rem; }
-  }
   
   section,
   footer {
-    padding:28px ${p => p.theme.containers.main};
-    margin-top:20rem;
+    padding:0 ${p => p.theme.containers.main};
   }
 
   .container {
@@ -64,23 +58,36 @@ const Global = createGlobalStyle`
   }
   
   // smaller monitors
-  @media (max-width:1480px) { html { font-size:9px; } }
+  @media (max-width:1280px) { html { font-size:8px; } }
   @media (max-width:1080px) { html { font-size:7px; } }
-  @media (min-width:881px) AND (max-width:940px) { html { font-size:6px; } }
+  @media (max-width:940px) { html { font-size:6px; } }
 
   // mobile
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     html { font-size:10px; }
-
-    .sectionName { font-size:2.3rem; line-height:1.55em; }
-    .sectionTitle { font-size:4.8rem; line-height:1.35em; }
   }
 
-  @media (max-width:644px) { html { font-size:8px; } }
-  @media (max-width:544px) { html { font-size:6px; } }
+  @media (max-width:720px) { html { font-size:8px; } }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    html { font-size:10px; }
     section, footer { padding:${p => p.theme.containers.mobile}; }
+
+    .sectionName {
+      font-size:2.0rem;
+      line-height:3.1rem;
+    }
+  
+    .sectionTitle {
+      font-size:2.8rem;
+      line-height:3.7rem;
+      font-family:Poppins-Thin;
+    }
+  
+    .sectionDescription {
+      font-size:1.6rem;
+      line-height:2.4rem;
+    }
   }
 `
 

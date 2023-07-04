@@ -11,7 +11,7 @@ const Soluctions = () => {
     <S.Section>
       <S.Content className='container'>
         <h2 className='sectionName'>Soluções</h2>
-        <h1 className='sectionTitle'>Conte conosco para</h1>
+        <h1 className='sectionTitle'>Conte conosco para:</h1>
       </S.Content>
       <S.CardsArea className='container'>
         {soluctions.map((s, k) => (

@@ -4,6 +4,7 @@ import Sconsts from "../../styled/consts"
 
 
 export const Section = styled.section`
+  padding-bottom:30rem;
 
   & > svg {
     position:absolute;
@@ -17,6 +18,12 @@ export const Section = styled.section`
       transform:translateX(60%);
     }
   }
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    padding-bottom:20rem;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) { padding-bottom:2.5rem; }
 `
 
 export const Content = styled.div``
@@ -43,6 +50,8 @@ export const Texts = styled.div`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     min-width:100%;
   }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) { padding-bottom:0; }
 `
 
 export const QualitiesList = styled.div`
@@ -76,6 +85,13 @@ export const QualityName = styled.h3`
   @media (min-width:640px) AND (max-width:${Sconsts.breakpoints.tablet}px) {
     font-size:2.2rem;
   }
+
+  @media(max-width:${Sconsts.breakpoints.cellphone}px) {
+    font-size:2.0rem;
+    line-height:3.1rem;
+    font-family:Poppins;
+    font-weight:normal;
+  }
 `
 
 export const ItemDesc = styled.span`
@@ -95,6 +111,13 @@ export const ItemDesc = styled.span`
 
   @media (max-width:540px) {
     width:90%;
+  }
+
+  @media(max-width:${Sconsts.breakpoints.cellphone}px) {
+    font-size:1.6rem;
+    line-height:2.4rem;
+    font-family:Poppins;
+    font-weight:normal;
   }
 `
 

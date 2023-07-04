@@ -5,6 +5,7 @@ import Sconsts from "../../styled/consts"
 
 export const Section = styled.section`
   position:relative;
+  padding-bottom:20rem;
 
   &::before {
     position:absolute;
@@ -16,9 +17,21 @@ export const Section = styled.section`
     width:81.1rem;
     height:81.1rem;
     border-radius:81.1rem;
-    background: ${p=>p.theme.pallete.gradient};
+    background: ${p => p.theme.pallete.gradient};
     filter:blur(70px);
     opacity:.1;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    padding-bottom:10rem;
+    
+    &::before { display:none; }
+  }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    
+    padding-bottom:2.5rem;
+    &::before { display:none; }
   }
 `
 

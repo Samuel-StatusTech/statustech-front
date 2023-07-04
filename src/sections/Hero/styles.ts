@@ -4,16 +4,13 @@ import Sconsts from "../../styled/consts"
 
 
 export const Section = styled.section`
-  padding:4rem ${p => p.theme.containers.main};
+  padding:3rem ${p => p.theme.containers.main};
+  margin-bottom:8rem;
 
-  @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    
-    padding-top:5rem;
-  }
-
+  @media (max-width:${Sconsts.breakpoints.tablet}px) { margin-bottom:2rem; }
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    
-    padding:5rem ${p=>p.theme.containers.mobile};
+    padding:5rem ${p => p.theme.containers.mobile} 3rem;
+    margin-bottom:0;
   }
 `
 
@@ -22,21 +19,42 @@ export const Content = styled.div`
   gap:5.5rem;
   justify-content:space-between;
   align-items:top;
+  max-width:1274px;
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    flex-direction:column;
+    gap:6rem;
+  }
+`
+
+export const Texts = styled.div`
+  padding-top:12rem;
+  display:flex;
+  flex-direction:column;
+  gap:3rem;
+  min-width:59rem;
+  max-width:59rem;
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    min-width:unset;
+    flex:1;
+    padding-top:0rem;
+  }
+`
+
+export const ImageWrapper = styled.div`
+  flex:1;
+  max-width:63rem;
 
   img {
-    width:50%;
+    max-width:100%;
     height:auto;
   }
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    
-    flex-direction:column;
-    gap:6rem;
 
-    img {
-      width:65vw;
-      margin:auto;
-    }
+    max-width:64vw;
+    margin:auto;
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
@@ -44,18 +62,5 @@ export const Content = styled.div`
     img {
       width:77vw;
     }
-  }
-`
-
-export const Texts = styled.div`
-  margin-top:12rem;
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  gap:2.5rem;
-
-  @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    
-    margin-top:0rem;
   }
 `
