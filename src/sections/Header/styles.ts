@@ -7,6 +7,10 @@ export const Section = styled.header`
   padding:28px ${p => p.theme.containers.main};
   background: rgba(23, 25, 26, 1);
   box-shadow: 0px 100px 250px -50px rgba(0, 214, 238, 1);
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding:28px ${p => p.theme.containers.mobile};
+  }
 `
 
 export const Content = styled.div`
@@ -37,7 +41,7 @@ export const Content = styled.div`
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding:${p=>p.theme.containers.mobile};
+    padding:${p => p.theme.containers.mobile};
   }
 `
 

@@ -26,6 +26,7 @@ const Global = createGlobalStyle`
     &:nth-child(2) { margin-top:11rem; }
     &:nth-child(3) { margin-top:10rem; }
   }
+  
   section,
   footer {
     padding:28px ${p => p.theme.containers.main};
@@ -33,7 +34,7 @@ const Global = createGlobalStyle`
   }
 
   .container {
-    max-width:1480px;
+    max-width:1310px;
     margin:auto;
   }
 
