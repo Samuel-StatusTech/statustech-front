@@ -47,10 +47,21 @@ export const ListArea = styled.div`
 
 export const Top = styled.div`
   display:flex;
-  gap:20rem;
+  justify-content:space-between;
+  gap:10rem;
+`
+
+export const ImageContainer = styled.div`
+  align-self:flex-end;
 
   img {
     max-height:22rem;
+    height:auto;
+    max-width:100%;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    display:none;
   }
 `
 

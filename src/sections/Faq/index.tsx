@@ -18,7 +18,9 @@ const Faq = () => {
             <h2 className='sectionName'>FAQ</h2>
             <h1 className='sectionTitle'>Perguntas frequentes</h1>
           </S.Titles>
-          <img src={FaqImage} alt='FAQ' />
+          <S.ImageContainer>
+            <img src={FaqImage} alt='FAQ' />
+          </S.ImageContainer>
         </S.Top>
         <S.ListArea>
           {faqs.map((f, k) => (

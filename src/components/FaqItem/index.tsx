@@ -11,12 +11,12 @@ function FaqItem({ question, answer }: FaqType) {
 
   return (
     <S.Item>
-      <S.Top>
+      <S.Top onClick={() => setOpened(!opened)}>
         <S.Question>{question}</S.Question>
         {opened ?
-          <RetractIcon onClick={() => setOpened(!opened)} />
+          <RetractIcon />
           :
-          <ExpandIcon onClick={() => setOpened(!opened)} />
+          <ExpandIcon />
         }
       </S.Top>
       <S.AnswerWrapper opened={opened}>

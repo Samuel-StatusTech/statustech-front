@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const Item = styled.div`
   display:flex;
   flex-direction:column;
-  padding-bottom:2.8rem;
+  padding-bottom:3.5rem;
   border-bottom:2px solid ${p => p.theme.text.lightwhite};
   max-width:114rem;
 `
@@ -12,11 +12,12 @@ export const Item = styled.div`
 export const Top = styled.div`
   display:flex;
   justify-content:space-between;
+  gap:4rem;
+  cursor:pointer;
 
   svg {
     width:4.5rem;
     height:4.5rem;
-    cursor:pointer;
   }
 `
 
@@ -34,11 +35,10 @@ export const AnswerWrapper = styled.div<{ opened: boolean; }>`
 
 export const AnswerArea = styled.div`
   overflow:hidden;
-  transform:translateY(1rem);
+  transform:translateY(2rem);
 `
 
 export const Answer = styled.span`
   font-size:2rem;
   color:${p => p.theme.text.lightgrey};
-  transform:translateY(1rem);
 `
