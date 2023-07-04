@@ -8,12 +8,18 @@ const theme: DefaultTheme = {
   },
   text: {
     primary: 'rgba(255, 255, 255, 1)',
-    lightblue: 'rgba(0, 214, 238, 1)'
+    lightblue: 'rgba(0, 214, 238, 1)',
+    lightgrey: 'rgba(144, 161, 165, 1)',
+    lightwhite: 'rgba(225, 236, 239, 1)'
   },
   containers: {
     main: "65px",
     mobile: "15px"
   },
+  shadows: {
+    button: '0px 20px 20px -20px rgba(0, 214, 238, 0.3)',
+    dataBox: '0px 50px 100px -45px rgba(0, 214, 238, 0.15)',
+  }
 }
 
 

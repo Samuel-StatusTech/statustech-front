@@ -6,6 +6,7 @@ const Global = createGlobalStyle`
   html {
     font-size:10px;
     color:${p => p.theme.text.primary};
+    overflow-x:hidden;
   }
 
   * {
@@ -17,10 +18,16 @@ const Global = createGlobalStyle`
 
   body {
     background-color:${p => p.theme.pallete.bodybg};
+    overflow-x:hidden;
+    position:relative;
   }
 
   section {
     padding:28px ${p => p.theme.containers.main};
+    margin-top:20rem;
+
+    &:nth-child(2) { margin-top:11rem; }
+    &:nth-child(3) { margin-top:10rem; }
   }
 
   .sectionName {
@@ -45,7 +52,7 @@ const Global = createGlobalStyle`
   .sectionDescription {
     font-size:2rem;
     line-height:3.1rem;
-    color: rgba(144, 161, 165, 1);
+    color: ${p => p.theme.text.lightgrey};
   }
 
 

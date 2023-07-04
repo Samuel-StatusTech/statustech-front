@@ -10,10 +10,16 @@ declare module "styled-components" {
     text: {
       primary: string;
       lightblue: string;
+      lightgrey: string;
+      lightwhite: string;
     };
     containers: {
       main: string;
       mobile: string;
     };
+    shadows: {
+      button: string;
+      dataBox: string;
+    }
   }
 }

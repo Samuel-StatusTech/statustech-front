@@ -10,5 +10,5 @@ export const Element = styled.button`
   border:none;
   outline:none;
   cursor:pointer;
-  box-shadow: 0px 20px 20px -20px rgba(0, 214, 238, 0.3);
+  box-shadow:${p => p.theme.shadows.button};
 `
