@@ -13,6 +13,7 @@ const Header = () => {
 
   return (
     <S.Section>
+      <S.Content className='container'>
       <LogoFull />
       <S.LinksArea id='headerLinksArea'>
         <Link text='Home' />
@@ -23,6 +24,7 @@ const Header = () => {
       </S.LinksArea>
       <Button text="Entre em contato" />
       <BurguerMenu />
+      </S.Content>
     </S.Section>
   )
 
