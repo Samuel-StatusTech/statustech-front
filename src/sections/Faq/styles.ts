@@ -5,16 +5,13 @@ import Sconsts from "../../styled/consts"
 
 export const Section = styled.section`
   position:relative;
+  padding-bottom:20rem;
 
   & > svg {
     position:absolute;
     z-index:-1;
     right:0;
     transform:translateX(70%);
-
-    @media (max-width:${Sconsts.breakpoints.tablet}px) {
-      height:50vh;
-    }
   }
 
   &::before {
@@ -30,6 +27,18 @@ export const Section = styled.section`
     background: ${p=>p.theme.pallete.gradient};
     filter:blur(70px);
     opacity:.1;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    padding-bottom:10rem;
+
+    & > svg {
+      height:50vh;
+    }
+  }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding-bottom:2.5rem;
   }
 `
 

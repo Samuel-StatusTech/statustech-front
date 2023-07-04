@@ -9,7 +9,7 @@ export const Section = styled.header`
   box-shadow: 0px 100px 250px -50px rgba(0, 214, 238, 1);
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding:28px ${p => p.theme.containers.mobile};
+    padding:${p => p.theme.containers.mobile};
   }
 `
 

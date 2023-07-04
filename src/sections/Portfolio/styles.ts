@@ -10,6 +10,10 @@ export const Section = styled.section`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     padding-bottom:10rem;
   }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding-bottom:2.5rem;
+  }
 `
 
 export const Content = styled.div`

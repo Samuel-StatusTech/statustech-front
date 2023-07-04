@@ -1,13 +1,13 @@
-import HeroImage from "../../assets/images/hero.png"
-import AboutImage from "../../assets/images/necessities.png"
-import FaqImage from "../../assets/images/faq.png"
+import HeroImage from "../../assets/images/hero.webp"
+import AboutImage from "../../assets/images/necessities.webp"
+import FaqImage from "../../assets/images/faq.webp"
 
-import ProjectThumb1 from "../../assets/images/_ph-client1.png"
-import ProjectThumb2 from "../../assets/images/_ph-client2.png"
-import ProjectThumb3 from "../../assets/images/_ph-client3.png"
-import ProjectThumb4 from "../../assets/images/_ph-client4.png"
-import ProjectThumb5 from "../../assets/images/_ph-client5.png"
-import ProjectThumb6 from "../../assets/images/_ph-client6.png"
+import ProjectThumb1 from "../../assets/images/ph-client1.webp"
+import ProjectThumb2 from "../../assets/images/ph-client2.webp"
+import ProjectThumb3 from "../../assets/images/ph-client3.webp"
+import ProjectThumb4 from "../../assets/images/ph-client4.webp"
+import ProjectThumb5 from "../../assets/images/ph-client5.webp"
+import ProjectThumb6 from "../../assets/images/ph-client6.webp"
 
 
 export {
