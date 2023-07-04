@@ -6,7 +6,17 @@ const Testimonials = () => {
 
 
   return (
-    <S.Section>Testimonials</S.Section>
+    <S.Section>
+      <S.Content>
+        <S.Top>
+          <S.Titles>
+            <h2 className='sectionName'>Depoimentos</h2>
+            <h1 className='sectionTitle'>O que dizem nossos clientes</h1>
+            <p className='sectionDescription'>Clientes que confiam em nossas soluções tecnológicas e estão prontos para dar o seu recado sobre nossos produtos e serviços.</p>
+          </S.Titles>
+        </S.Top>
+      </S.Content>
+    </S.Section>
   )
 
 }

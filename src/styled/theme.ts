@@ -4,6 +4,8 @@ const theme: DefaultTheme = {
   pallete: {
     bodybg: 'rgba(27, 29, 31, 1)',
     darkbg: 'rgba(23, 25, 26, 1)',
+    projectcontent: 'rgba(41, 43, 45, 1)',
+    projectLink: 'rgba(144, 161, 165, 1)',
     gradient: 'linear-gradient(102.38deg, #00F800 -35.84%, #00D6EE 104.25%)'
   },
   text: {

@@ -1,0 +1,1 @@
+export type PortfolioTags = 'all' | 'design' | 'website' | 'system' | 'app'

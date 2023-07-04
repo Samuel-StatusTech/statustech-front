@@ -5,6 +5,8 @@ declare module "styled-components" {
     pallete: {
       bodybg: string;
       darkbg: string;
+      projectcontent: string;
+      projectLink: string;
       gradient: string;
     };
     text: {
