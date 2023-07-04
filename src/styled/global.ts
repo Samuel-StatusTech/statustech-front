@@ -18,7 +18,7 @@ const Global = createGlobalStyle`
 
   body {
     background-color:${p => p.theme.pallete.bodybg};
-    overflow-x:hidden;
+    overflow:hidden;
     position:relative;
   }
 

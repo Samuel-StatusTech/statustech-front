@@ -9,7 +9,11 @@ import { ReactComponent as Smart } from "../../assets/icons/smart.svg"
 import { ReactComponent as Aws } from "../../assets/icons/performance.svg"
 
 import { ReactComponent as AboutBg } from "../../assets/icons/about_bg.svg"
+import { ReactComponent as FaqBg } from "../../assets/icons/faq_bg.svg"
 import { ReactComponent as Bullet } from "../../assets/icons/bullet.svg"
+
+import { ReactComponent as RetractIcon } from "../../assets/icons/retract.svg"
+import { ReactComponent as ExpandIcon } from "../../assets/icons/expand.svg"
 
 import { ReactComponent as Mail } from "../../assets/icons/mail.svg"
 import { ReactComponent as Phone } from "../../assets/icons/phone.svg"
@@ -26,7 +30,10 @@ export {
   Smart,
   Aws,
   AboutBg,
+  FaqBg,
   Bullet,
+  RetractIcon,
+  ExpandIcon,
   Mail,
   Phone,
   Location,

@@ -11,6 +11,11 @@ export const Section = styled.section`
     height:80vh;
     right:0;
     transform:translateX(40%);
+
+    @media (max-width:${Sconsts.breakpoints.tablet}px) {
+      height:50vh;
+      transform:translateX(60%);
+    }
   }
 `
 
@@ -18,7 +23,6 @@ export const Content = styled.div``
 
 export const Titles = styled.div`
   position:relative;
-
   h2 { top:-3.78rem; }
 `
 
@@ -26,6 +30,7 @@ export const MainContent = styled.div`
   display:flex;
   position:relative;
   gap:1rem;
+  margin-top:2.5rem;
 `
 
 export const Texts = styled.div`
@@ -99,6 +104,7 @@ export const SectionImg = styled.div`
   height:fit-content;
   justify-content:flex-end;
   place-self:flex-end;
+  max-width:980px;
   
   img {
     margin-left:4rem;
@@ -109,6 +115,7 @@ export const SectionImg = styled.div`
   @media (max-width:1280px) {
     max-height:840px;
     width:unset;
+    max-width:unset;
   }
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
