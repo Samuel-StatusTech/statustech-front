@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
 import { FaqImage } from '../../utils/resumedImports/images'
 import { FaqBg } from '../../utils/resumedImports/icons'
@@ -6,11 +6,15 @@ import faqs from '../../utils/consts/faqs'
 import FaqItem from '../../components/FaqItem'
 
 
-const Faq = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const Faq = forwardRef<HTMLElement, Props>(({ }, ref) => {
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <FaqBg />
       <S.Content className='container'>
         <S.Top>
@@ -31,7 +35,7 @@ const Faq = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default Faq

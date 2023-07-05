@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
 import soluctions from '../../utils/consts/soluctions'
 import SoluctionCard from '../../components/SoluctionCards'
 
 
-const Soluctions = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const Soluctions = forwardRef<HTMLElement, Props>(({ }, ref) => {
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <S.Content className='container'>
         <h2 className='sectionName'>Soluções</h2>
         <h1 className='sectionTitle'>Conte conosco para:</h1>
@@ -21,7 +25,7 @@ const Soluctions = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default Soluctions

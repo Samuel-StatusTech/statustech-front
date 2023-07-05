@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
 import { AboutBg, Bullet } from '../../utils/resumedImports/icons'
 import { AboutImage } from '../../utils/resumedImports/images'
 
 
-const About = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const About = forwardRef<HTMLElement, Props>(({}, ref) => {
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <AboutBg />
       <S.Content className='container'>
         <S.Titles>
@@ -64,7 +68,7 @@ const About = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default About

@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
 import { HeroImage } from '../../utils/resumedImports/images'
 
 
-const Hero = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const Hero = forwardRef<HTMLElement, Props>(({ }, ref) => {
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <S.Content className='container'>
         <S.Texts>
           <h2 className='sectionName'>Soluções digitais</h2>
@@ -21,7 +25,7 @@ const Hero = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default Hero

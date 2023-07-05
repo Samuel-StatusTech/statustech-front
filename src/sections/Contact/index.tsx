@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { forwardRef, useState } from 'react'
 import * as S from './styles'
 import { ContactImage } from '../../utils/resumedImports/images'
 import { Captcha, Check } from '../../utils/resumedImports/icons'
 import Button from '../../components/Button'
 
 
-const Contact = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const Contact = forwardRef<HTMLElement, Props>(({ }, ref) => {
 
   const [isRobot, setIsRobot] = useState(false)
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <S.Content className='container'>
         <S.ImageArea>
           <img src={ContactImage} alt='Entre em contato' />
@@ -39,7 +43,7 @@ const Contact = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default Contact

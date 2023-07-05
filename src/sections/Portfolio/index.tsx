@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
 import projects from '../../utils/consts/portfolio'
 import PortfolioFilter from '../../components/PortfolioFilter'
 import ProjectItem from '../../components/ProjectItem'
 
 
-const Portfolio = () => {
+type Props = {
+  ref: React.ForwardRefExoticComponent<HTMLElement>;
+}
+
+const Portfolio = forwardRef<HTMLElement, Props>(({},ref) => {
 
 
   return (
-    <S.Section>
+    <S.Section ref={ref}>
       <S.Content className='container'>
         <S.Top>
           <S.Titles>
@@ -27,7 +31,7 @@ const Portfolio = () => {
     </S.Section>
   )
 
-}
+})
 
 
 export default Portfolio

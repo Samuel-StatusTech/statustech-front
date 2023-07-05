@@ -9,9 +9,9 @@ export const Section = styled.section`
   & > svg {
     position:absolute;
     z-index:-1;
-    height:80vh;
+    height:1380px;
     right:0;
-    transform:translateX(40%);
+    transform:translateX(30%);
 
     @media (max-width:${Sconsts.breakpoints.tablet}px) {
       height:50vh;
@@ -20,7 +20,7 @@ export const Section = styled.section`
   }
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    padding-bottom:20rem;
+    padding-bottom:20px;
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
@@ -39,7 +39,7 @@ export const Titles = styled.div`
 export const MainContent = styled.div`
   display:flex;
   position:relative;
-  gap:1rem;
+  gap:4rem;
   margin-top:2.5rem;
 `
 
@@ -79,9 +79,11 @@ export const ItemTitle = styled.div`
   }
 `
 
-export const QualityName = styled.h3`
+export const QualityName = styled.h2`
   font-size:2.8rem;
-  font-family:Poppins-Light;
+  line-height:135%;
+  font-family:Poppins;
+  font-weight:300;
   color:${p => p.theme.text.lightwhite};
   white-space:nowrap;
 
@@ -91,7 +93,6 @@ export const QualityName = styled.h3`
 
   @media(max-width:${Sconsts.breakpoints.cellphone}px) {
     font-size:2.0rem;
-    line-height:3.1rem;
     font-family:Poppins;
     font-weight:normal;
   }
@@ -99,9 +100,9 @@ export const QualityName = styled.h3`
 
 export const ItemDesc = styled.span`
   margin-left:3.5rem;
-  width:60%;
+  width:80%;
   font-size:2rem;
-  line-height:3.1rem;
+  line-height:155%;
   color:${p => p.theme.text.lightgrey};
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
@@ -118,9 +119,6 @@ export const ItemDesc = styled.span`
 
   @media(max-width:${Sconsts.breakpoints.cellphone}px) {
     font-size:1.6rem;
-    line-height:2.4rem;
-    font-family:Poppins;
-    font-weight:normal;
   }
 `
 
@@ -130,10 +128,9 @@ export const SectionImg = styled.div`
   height:fit-content;
   justify-content:flex-end;
   place-self:flex-end;
-  max-width:980px;
+  max-width:622px;
   
   img {
-    margin-left:4rem;
     aspect-ratio:0.84/1;
     width:100%;
   }

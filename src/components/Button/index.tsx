@@ -4,13 +4,14 @@ import * as S from "./styles"
 
 type Props = {
   text: string;
+  onClick?: () => void;
 }
 
-const Button = ({ text }: Props) => {
+const Button = ({ text, onClick }: Props) => {
 
 
   return (
-    <S.Element id='getInTouchHeaderBtn'>{text}</S.Element>
+    <S.Element id='getInTouchHeaderBtn' onClick={onClick}>{text}</S.Element>
   )
 
 }
