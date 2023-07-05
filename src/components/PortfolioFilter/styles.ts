@@ -6,11 +6,19 @@ export const Area = styled.div`
   position:relative;
   background-color:#292B2D;
   border-radius:9px;
-  width:100%;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    width:100%;
+  }
 `
 
 export const OptionsDropdown = styled.div`
   position:relative;
+  display:none;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    display:block;
+  }
 `
 
 export const TopVisible = styled.div<{ expanded: boolean; }>`

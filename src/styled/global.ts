@@ -22,10 +22,8 @@ const Global = createGlobalStyle`
     position:relative;
   }
   
-  section,
-  footer {
-    padding:0 ${p => p.theme.containers.main};
-  }
+  section { padding:0 ${p => p.theme.containers.main}; }
+  footer { padding:4rem ${p => p.theme.containers.main}; }
 
   .container {
     max-width:1310px;
@@ -71,7 +69,8 @@ const Global = createGlobalStyle`
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
     html { font-size:10px; }
-    section, footer { padding:${p => p.theme.containers.mobile}; }
+    section { padding:${p => p.theme.containers.mobile}; }
+    footer { padding:4.6rem 1.6rem 6.6rem 2.4rem; }
 
     .sectionName {
       font-size:2.0rem;

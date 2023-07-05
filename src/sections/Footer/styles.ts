@@ -85,4 +85,8 @@ export const ContactArea = styled.div`
   display:flex;
   flex-direction:column;
   gap:1.5rem;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    gap:3.2rem;
+  }
 `

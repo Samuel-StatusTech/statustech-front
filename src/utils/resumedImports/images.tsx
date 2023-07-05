@@ -9,6 +9,9 @@ import ProjectThumb4 from "../../assets/images/ph-client4.webp"
 import ProjectThumb5 from "../../assets/images/ph-client5.webp"
 import ProjectThumb6 from "../../assets/images/ph-client6.webp"
 
+import TestImg1 from "../../assets/images/testimg1.webp"
+import TestImg2 from "../../assets/images/testimg2.webp"
+
 
 export {
   HeroImage,
@@ -20,4 +23,6 @@ export {
   ProjectThumb4,
   ProjectThumb5,
   ProjectThumb6,
+  TestImg1,
+  TestImg2,
 }
