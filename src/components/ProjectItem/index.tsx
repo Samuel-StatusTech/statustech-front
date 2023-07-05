@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as S from "./styled"
 import { Project } from '../../utils/types/projects'
 import { ProjectArrow } from '../../utils/resumedImports/icons';
@@ -10,9 +10,21 @@ type Props = {
 
 const ProjectItem = ({ info }: Props) => {
 
+  const thisEl = useRef<HTMLDivElement | null>(null)
+
+  const handleClick = () => {
+    document.querySelectorAll(".portfolioProject.projectFocused")
+      .forEach(el => el.classList.remove('projectFocused'))
+
+    thisEl.current?.classList.add('projectFocused')
+  }
+
+  useEffect(() => {
+    document.querySelectorAll(".portfolioProject")[0].classList.add('projectFocused')
+  },)
 
   return (
-    <S.Project bg={info.thumb}>
+    <S.Project bg={info.thumb} className='portfolioProject' onClick={handleClick} ref={thisEl}>
       <S.Content>
         <S.ProjectDetails>
           <S.Client>{info.client}</S.Client>

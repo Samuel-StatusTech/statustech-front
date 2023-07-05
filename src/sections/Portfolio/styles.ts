@@ -28,8 +28,10 @@ export const Content = styled.div`
 
 export const Top = styled.div`
   display:flex;
+  flex-direction:column;
   justify-content:space-between;
-  gap:10rem;
+  align-items:flex-start;
+  gap:1.1rem;
 `
 
 export const Titles = styled.div`

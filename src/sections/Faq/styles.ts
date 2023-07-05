@@ -32,13 +32,13 @@ export const Section = styled.section`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     padding-bottom:10rem;
 
-    & > svg {
-      height:50vh;
-    }
+    & > svg,
+    &::before { display:none; }
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
     padding-bottom:2.5rem;
+    margin-bottom:3rem;
   }
 `
 
@@ -46,6 +46,10 @@ export const Content = styled.div`
   display:flex;
   flex-direction:column;
   gap:6.5rem;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    gap:1.5rem;
+  }
 `
 
 export const ListArea = styled.div`

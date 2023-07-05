@@ -15,14 +15,21 @@ export const Project = styled.div<{ bg: string; }>`
   justify-content:flex-end;
   transition:filter .4s;
   filter:saturate(0) brightness(.3);
-  min-height:53.8rem;
 
-  &:hover {
+  &:hover,
+  &.projectFocused {
+    
     filter:saturate(1) brightness(1);
+    div { opacity:1; }
+  }
 
-    div {
-      opacity:1;
-    }
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    min-height:53.4rem;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    min-height:45.6rem;
+    padding:2rem 4.4rem 2rem 2rem;
   }
 `
 
@@ -31,9 +38,14 @@ export const Content = styled.div`
   padding:3.3rem;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   border-radius:.9rem;
   transition:opacity .4s;
   opacity:0;
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding:2rem 0 2rem 3rem;
+  }
 `
 
 export const ProjectDetails = styled.div`
@@ -69,5 +81,9 @@ export const ArrowArea = styled.div`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     width:5.4rem;
     height:5.4rem;
+  }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    transform:translateX(50%);
   }
 `

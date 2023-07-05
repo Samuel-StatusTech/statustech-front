@@ -12,14 +12,14 @@ import { Project } from "../types/projects"
 const projects: Project[] = [
   {
     thumb: ProjectThumb1,
-    client: 'Client',
-    name: 'Name',
+    client: 'Cliente',
+    name: 'Nome do projeto',
     link: ''
   },
   {
     thumb: ProjectThumb2,
-    client: 'Client',
-    name: 'Name',
+    client: 'Outro cliente',
+    name: 'Outro projeto',
     link: ''
   },
   {

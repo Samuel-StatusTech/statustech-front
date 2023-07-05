@@ -23,7 +23,10 @@ export const Section = styled.section`
     padding-bottom:20rem;
   }
 
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) { padding-bottom:2.5rem; }
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding-bottom:2.5rem;
+    & > svg { display:none; }
+  }
 `
 
 export const Content = styled.div``

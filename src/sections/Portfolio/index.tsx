@@ -15,8 +15,8 @@ const Portfolio = () => {
           <S.Titles>
             <h2 className='sectionName'>Portfolio</h2>
             <h1 className='sectionTitle'>Alguns de nossos trabalhos</h1>
-            <PortfolioFilter />
           </S.Titles>
+          <PortfolioFilter />
         </S.Top>
         <S.ProjectsGridWrapper>
           <S.ProjectsGrid>
