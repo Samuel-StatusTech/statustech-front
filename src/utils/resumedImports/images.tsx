@@ -1,6 +1,7 @@
 import HeroImage from "../../assets/images/hero.webp"
 import AboutImage from "../../assets/images/necessities.webp"
 import FaqImage from "../../assets/images/faq.webp"
+import ContactImage from "../../assets/images/contact.webp"
 
 import ProjectThumb1 from "../../assets/images/ph-client1.webp"
 import ProjectThumb2 from "../../assets/images/ph-client2.webp"
@@ -17,6 +18,7 @@ export {
   HeroImage,
   AboutImage,
   FaqImage,
+  ContactImage,
   ProjectThumb1,
   ProjectThumb2,
   ProjectThumb3,

@@ -39,10 +39,6 @@ export const Content = styled.div`
       display:block;
     }
   }
-
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding:${p => p.theme.containers.mobile};
-  }
 `
 
 export const LinksArea = styled.div`

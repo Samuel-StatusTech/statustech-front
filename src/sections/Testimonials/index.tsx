@@ -46,7 +46,7 @@ const Testimonials = () => {
       const fullSize = sw - cardSize + paddingSize
       const percentage = (sl / fullSize) * 100
 
-      setMlPercent(+percentage.toFixed(2))
+      setMlPercent(percentage)
     }
   }, [])
 

@@ -25,6 +25,9 @@ import { ReactComponent as Mail } from "../../assets/icons/mail.svg"
 import { ReactComponent as Phone } from "../../assets/icons/phone.svg"
 import { ReactComponent as Location } from "../../assets/icons/location.svg"
 
+import { ReactComponent as Check } from "../../assets/icons/check.svg"
+import { ReactComponent as Captcha } from "../../assets/icons/captcha.svg"
+
 
 export {
   LogoFull,
@@ -47,4 +50,6 @@ export {
   Mail,
   Phone,
   Location,
+  Check,
+  Captcha,
 }
