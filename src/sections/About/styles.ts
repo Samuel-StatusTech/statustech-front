@@ -4,7 +4,8 @@ import Sconsts from "../../styled/consts"
 
 
 export const Section = styled.section`
-  padding-bottom:30rem;
+  padding-bottom:29rem;
+  padding-top:2rem;
 
   & > svg {
     position:absolute;
@@ -20,11 +21,11 @@ export const Section = styled.section`
   }
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    padding-bottom:20px;
+    padding-bottom:17.8rem;
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding-bottom:2.5rem;
+    padding-bottom:.4rem;
     & > svg { display:none; }
   }
 `

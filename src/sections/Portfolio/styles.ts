@@ -5,14 +5,15 @@ import Sconsts from "../../styled/consts"
 
 export const Section = styled.section`
   position:relative;
-  padding-bottom:20rem;
+  padding-bottom:26rem;
+  padding-top:2rem;
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    padding-bottom:10rem;
+    padding-bottom:9rem;
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    padding-bottom:2.5rem;
+    padding-bottom:2.2rem;
   }
 `
 
