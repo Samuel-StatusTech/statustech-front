@@ -58,34 +58,30 @@ export const FieldsArea = styled.div`
   gap:3rem;
 `
 
-export const Input = styled.input`
-  padding:2.5rem 3rem;
-  border-radius:9px;
-  outline:none;
-  border:none;
-  background-color:${p => p.theme.text.lightwhite};
-  color:${p => p.theme.text.lightgrey};
-  
-  &,
-  &::placeholder {
-    font-size:2rem;
-    line-height:3.1rem;
-  }
+export const FieldArea = styled.div<{ showingError: boolean; }>`
+  display:flex;
+  flex-direction:column;
+  gap:4px;
 
-  &::placeholder {
-    color:rgba(144, 161, 165, 1);
+  span {
+    opacity:${p => p.showingError ? 1 : 0};
+    transition:opacity .4s;
+    font-size:1.6rem;
+    margin-left:3.2rem;
+    color:${p => p.theme.pallete.red};
+    font-family:Poppins-Medium;
+    font-weight:500;
   }
 `
 
-export const Textarea = styled.textarea`
+export const Input = styled.input<{ error: { is: boolean; message: string; } }>`
   padding:2.5rem 3rem;
   border-radius:9px;
   outline:none;
-  border:none;
-  background-color:${p => p.theme.text.lightwhite};
-  color:${p => p.theme.text.lightgrey};
-  resize:none;
-  height:12.6rem;
+  border:2px solid ${p => p.error.is ? p.theme.pallete.red : 'transparent'};
+  background-color:${p => p.error.is ? p.theme.pallete.lightred : p.theme.text.lightwhite};
+  color:${p => p.error.is ? p.theme.pallete.red : p.theme.text.lightgrey};
+  transition:border .4s, background-color .4s, color .4s;
   
   &,
   &::placeholder {
@@ -94,7 +90,31 @@ export const Textarea = styled.textarea`
   }
 
   &::placeholder {
-    color:rgba(144, 161, 165, 1);
+    color:${p => p.error.is ? p.theme.pallete.red : 'rgba(144, 161, 165, 1)'};
+    transition:color .4s;
+  }
+`
+
+export const Textarea = styled.textarea<{ error: { is: boolean; message: string; } }>`
+  padding:2.5rem 3rem;
+  border-radius:9px;
+  outline:none;
+  border:none;
+  resize:none;
+  height:12.6rem;
+  background-color:${p => p.error.is ? p.theme.pallete.lightred : p.theme.text.lightwhite};
+  color:${p => p.theme.text.lightgrey};
+  transition:border .4s, background-color .4s, color .4s;
+  
+  &,
+  &::placeholder {
+    font-size:2rem;
+    line-height:3.1rem;
+  }
+
+  &::placeholder {
+    color:${p => p.error.is ? p.theme.pallete.red : 'rgba(144, 161, 165, 1)'};
+    transition:color .4s;
   }
 `
 

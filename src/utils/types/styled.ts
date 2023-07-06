@@ -8,6 +8,8 @@ declare module "styled-components" {
       projectcontent: string;
       projectLink: string;
       gradient: string;
+      red: string;
+      lightred: string;
     };
     text: {
       primary: string;

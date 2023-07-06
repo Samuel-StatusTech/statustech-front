@@ -6,7 +6,9 @@ const theme: DefaultTheme = {
     darkbg: 'rgba(23, 25, 26, 1)',
     projectcontent: 'rgba(41, 43, 45, 1)',
     projectLink: 'rgba(144, 161, 165, 1)',
-    gradient: 'linear-gradient(102.38deg, #00F800 -35.84%, #00D6EE 104.25%)'
+    gradient: 'linear-gradient(102.38deg, #00F800 -35.84%, #00D6EE 104.25%)',
+    red: 'rgba(193, 14, 14, 1)',
+    lightred: 'rgba(247, 62, 62, .3)'
   },
   text: {
     primary: 'rgba(255, 255, 255, 1)',
@@ -20,7 +22,7 @@ const theme: DefaultTheme = {
   },
   shadows: {
     button: '0px 20px 20px -20px rgba(0, 214, 238, 0.3)',
-    dataBox: '0px 50px 100px -45px rgba(0, 214, 238, 0.15)',
+    dataBox: '0px 50px 100px -45px rgba(0, 214, 238, 0.15)'
   }
 }
 

@@ -4,7 +4,15 @@ import { BurguerIcon } from '../../../utils/resumedImports/icons'
 import Link from '../../../components/Link'
 
 
-const BurguerMenu = () => {
+type Props = {
+  handlePickFn: (refName: string) => void;
+  sectionsRelations: {
+    ref: React.MutableRefObject<HTMLElement | null>;
+    name: string;
+  }[];
+}
+
+const BurguerMenu = ({ handlePickFn, sectionsRelations }: Props) => {
 
   const menuRef = useRef<HTMLDivElement | null>(null)
 
@@ -15,8 +23,9 @@ const BurguerMenu = () => {
     }
   }
 
-  const handlePick = () => {
+  const handlePick = (refName: string) => {
     menuRef.current?.classList.remove('showing')
+    handlePickFn(refName)
   }
 
 
@@ -27,11 +36,9 @@ const BurguerMenu = () => {
         <S.MenuContainer>
           <S.MenuArea>
             <BurguerIcon onClick={handleClick} />
-            <Link text='Home' onClick={handlePick} />
-            <Link text='Soluções' onClick={handlePick} />
-            <Link text='Sobre' onClick={handlePick} />
-            <Link text='FAQ' onClick={handlePick} />
-            <Link text='Portfólio' onClick={handlePick} />
+            {sectionsRelations.map((s, k) => (
+              <Link key={k} text={s.name} onClick={() => handlePick(s.name)} />
+            ))}
           </S.MenuArea>
         </S.MenuContainer>
       </S.MenuBg>

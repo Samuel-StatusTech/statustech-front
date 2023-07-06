@@ -31,7 +31,10 @@ const Header = forwardRef<HTMLElement, Props>(({ sectionsRelations }, ref) => {
           ) : null)}
         </S.LinksArea>
         <Button text={sectionsRelations[sectionsRelations.length - 1].name} onClick={() => handleClick(sectionsRelations[sectionsRelations.length - 1].name)} />
-        <BurguerMenu />
+        <BurguerMenu
+          sectionsRelations={sectionsRelations}
+          handlePickFn={handleClick}
+        />
       </S.Content>
     </S.Section>
   )

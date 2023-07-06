@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Sconsts from "../../../styled/consts"
 
 
 export const Area = styled.div`
@@ -59,7 +60,9 @@ export const MenuArea = styled.div`
     z-index:-1;
   }
 
-  a {
-    height:fit-content;
+  a { height:fit-content; }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    padding-left:1.5rem;
   }
 `

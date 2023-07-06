@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
 import Soluctions from './sections/Soluctions'
@@ -11,6 +11,12 @@ import Footer from './sections/Footer'
 
 
 const App = () => {
+
+  const [modalInfo, setModalInfo] = useState({
+    showing: false,
+    title: '',
+    message: ''
+  })
 
   const heroRef = useRef<HTMLElement | null>(null)
   const soluctionsRef = useRef<HTMLElement | null>(null)
@@ -29,6 +35,19 @@ const App = () => {
   ]
 
 
+  const toggleModal = (success?: boolean) => {
+    if (success) {
+      setModalInfo({
+        showing: success ?? !modalInfo.showing,
+        title: success ? 'Email enviado com sucesso' : 'Ops.. Houve um erro',
+        message: success ? 'Entraremos em contato em breve' : 'Tente novamente mais tarde'
+      })
+    } else {
+      setModalInfo({ showing: false, title: '', message: '' })
+    }
+  }
+
+
   return (
     <>
       <Header sectionsRelations={sectionsRelations} />
@@ -38,7 +57,7 @@ const App = () => {
       <Portfolio ref={portfolioRef} />
       <Faq ref={faqRef} />
       <Testimonials />
-      <Contact ref={contactRef} />
+      <Contact ref={contactRef} toggleModal={toggleModal} />
       <Footer />
     </>
   )
