@@ -55,6 +55,7 @@ export const ProjectsGrid = styled.div`
     grid-template-columns:unset;
     overflow:auto;
     width:calc(100% + ${p => p.theme.containers.main});
+    padding-right:6rem;
 
     &::-webkit-scrollbar {
       height:0;

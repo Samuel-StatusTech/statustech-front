@@ -28,8 +28,11 @@ export const Project = styled.div<{ bg: string; }>`
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    min-height:45.6rem;
-    padding:2rem 4.4rem 2rem 2rem;
+    // min-height:45.6rem;
+    min-height:unset;
+    height:fit-content;
+    min-width:80vw;
+    padding:2rem;
   }
 `
 

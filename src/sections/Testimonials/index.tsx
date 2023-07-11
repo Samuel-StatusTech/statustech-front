@@ -4,6 +4,7 @@ import testimonials from '../../utils/consts/testimonial'
 import TestimonialCard from '../../components/TestimonialCard'
 import { NextArrow, PrevArrow } from '../../utils/resumedImports/icons'
 import Sconsts from '../../styled/consts'
+import { getFontsize } from '../../utils/functions/getFontSize'
 
 
 const Testimonials = () => {
@@ -11,15 +12,6 @@ const Testimonials = () => {
   const listRef = useRef<HTMLDivElement | null>(null)
   const [focusedItem, setFocusedItem] = useState(0)
   const [mlPercent, setMlPercent] = useState(0)
-
-  const getFontsize = () => {
-    const html = document.querySelector('html')
-    const fs = window.getComputedStyle(html as HTMLHtmlElement, null)
-      .getPropertyValue('font-size')
-    const parsed = parseFloat(fs)
-
-    return parsed
-  }
 
   const handleChange = (to: 'prev' | 'next') => {
     const qnt = testimonials.length
