@@ -49,6 +49,10 @@ export const FormArea = styled.div`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     max-width:unset;
   }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    max-width:100%;
+  }
 `
 
 export const FieldsArea = styled.div`

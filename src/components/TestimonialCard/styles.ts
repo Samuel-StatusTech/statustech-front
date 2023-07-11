@@ -14,9 +14,14 @@ export const Card = styled.div`
   cursor:default;
   
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    min-width:calc(100vw - 20rem);
+    max-width:calc(100vw - 20rem);
+    padding:3rem 2.4rem 1.2rem;
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    min-width:calc(100vw - 6rem);
+    max-width:calc(100vw - 6rem);
   }
 `
 
@@ -29,7 +34,8 @@ export const Top = styled.div`
 export const ImgBg = styled.div`
   background-color:${p => p.theme.pallete.bodybg};
   
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+  @media (max-width:${Sconsts.breakpoints.tablet}px) {
+    display:none;
   }
 `
 

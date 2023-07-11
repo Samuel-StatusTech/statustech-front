@@ -54,6 +54,7 @@ export const CardsList = styled.div<{ itemN: number; }>`
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     overflow-x:auto;
     padding-right:${p => p.theme.containers.main};
+    gap:1.6rem;
 
     @media (max-width:${Sconsts.breakpoints.cellphone}px) {
       padding-right:${p => p.theme.containers.mobile};
@@ -93,12 +94,22 @@ export const ProgressArea = styled.div<{ percent: number; mlPercent: number; }>`
   }
 `
 
-export const ButtonsArea = styled.div`
+export const ButtonsArea = styled.div<{ prevDisabled: boolean; nextDisabled: boolean; }>`
   display:flex;
   gap:2.4rem;
 
   svg {
     cursor:pointer;
+    transition:filter .4s;
+
+    &:nth-child(1) {
+      transform:rotate(180deg);
+      filter:grayscale(${p => p.prevDisabled ? 1 : 0});
+    }
+
+    &:nth-child(2) {
+      filter:grayscale(${p => p.nextDisabled ? 1 : 0});
+    }
   }
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {

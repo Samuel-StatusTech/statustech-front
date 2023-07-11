@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
 import Soluctions from './sections/Soluctions'
@@ -8,6 +8,7 @@ import Faq from './sections/Faq'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import Modal from './components/Modal'
 
 
 const App = () => {
@@ -35,21 +36,31 @@ const App = () => {
   ]
 
 
-  const toggleModal = (success?: boolean) => {
-    if (success) {
+  const toggleModal = useCallback((show: boolean, success: boolean) => {
+    const html = window.document.querySelector('html') as HTMLElement
+    const body = window.document.body
+
+    if (show) {
+      html.style.overflowY = 'hidden'
+      body.style.overflowY = 'hidden'
       setModalInfo({
-        showing: success ?? !modalInfo.showing,
-        title: success ? 'Email enviado com sucesso' : 'Ops.. Houve um erro',
-        message: success ? 'Entraremos em contato em breve' : 'Tente novamente mais tarde'
+        showing: true,
+        title: success ? 'Sua mensagem foi enviada!' : 'Ops.. Houve um erro',
+        message: success ? 'Entraremos em contato o mais breve possível!' : 'Por favor, tente novamente mais tarde.'
       })
     } else {
       setModalInfo({ showing: false, title: '', message: '' })
+      html.style.overflowY = 'auto'
+      body.style.overflowY = 'auto'
     }
-  }
+  }, [])
 
 
   return (
     <>
+      {modalInfo.showing &&
+        <Modal info={modalInfo} closeModal={() => toggleModal(false, false)} />
+      }
       <Header sectionsRelations={sectionsRelations} />
       <Hero ref={heroRef} />
       <Soluctions ref={soluctionsRef} />

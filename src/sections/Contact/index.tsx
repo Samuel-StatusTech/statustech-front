@@ -9,7 +9,7 @@ import { ErrorsChecks } from '../../utils/types/errorschecks'
 
 
 type Props = {
-  toggleModal: (show: boolean) => void;
+  toggleModal: (show: boolean, success: boolean) => void;
   ref: React.ForwardRefExoticComponent<HTMLElement>;
 }
 
@@ -44,7 +44,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
         setValues({ ...values, email: parsed.parsed })
         setErrors({
           ...errors,
-          email: { ...errors.email, is: false }
+          email: { ...errors.email, is: false, match: parsed.match }
         })
         break;
       case 'message':
@@ -56,7 +56,6 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
         break;
       default:
         return null
-        break;
     }
   }
 
@@ -77,10 +76,10 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
     if (!isSendDisabled) {
       if (errors.email.match) {
         const send = await Api.sendEmail(values)
-        if (send.status === 400 || send.status === 404) {
-          toggleModal(true)
+        if (send.status === 400 || send.status === 404 || send.status === 500) {
+          toggleModal(true, false)
         } else {
-          toggleModal(false)
+          toggleModal(true, true)
 
           cleanFields()
         }

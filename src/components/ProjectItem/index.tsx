@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import * as S from "./styled"
 import { Project } from '../../utils/types/projects'
-import { ProjectArrow } from '../../utils/resumedImports/icons';
 
 
 type Props = {
@@ -30,9 +29,6 @@ const ProjectItem = ({ info }: Props) => {
           <S.Client>{info.client}</S.Client>
           <S.Name>{info.name}</S.Name>
         </S.ProjectDetails>
-        <S.ArrowArea>
-          <ProjectArrow />
-        </S.ArrowArea>
       </S.Content>
     </S.Project>
   )

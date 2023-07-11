@@ -18,7 +18,7 @@ import { ReactComponent as ExpandIcon } from "../../assets/icons/expand.svg"
 import { ReactComponent as Dropdown } from "../../assets/icons/mobile_dropdown.svg"
 import { ReactComponent as ProjectArrow } from "../../assets/icons/arrow_thick.svg"
 
-import { ReactComponent as PrevArrow } from "../../assets/icons/ctrl_prev.svg"
+import { ReactComponent as PrevArrow } from "../../assets/icons/ctrl_next.svg"
 import { ReactComponent as NextArrow } from "../../assets/icons/ctrl_next.svg"
 
 import { ReactComponent as Mail } from "../../assets/icons/mail.svg"

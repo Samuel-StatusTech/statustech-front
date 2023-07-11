@@ -3,7 +3,7 @@ const maskEmail = (value: string) => {
 
   return ({
     parsed: value,
-    matched: emailPattern.test(value)
+    match: emailPattern.test(value)
   })
 }
 

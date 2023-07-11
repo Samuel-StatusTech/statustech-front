@@ -22,13 +22,17 @@ export const useApi = () => {
         message: string,
       }
     ) => {
-      const send = await service.post('/sendemail', {
-        personName: values.name,
-        emailToReply: values.email,
-        message: values.message,
-      })
+      try {
+        const send = await service.post('/sendemail', {
+          personName: values.name,
+          emailToReply: values.email,
+          message: values.message,
+        })
 
-      return ({ status: send.status })
+        return ({ status: send.status })
+      } catch (err: any) {
+        return ({ status: err.response.status })
+      }
     },
   })
 }

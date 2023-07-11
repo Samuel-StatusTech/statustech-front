@@ -64,26 +64,3 @@ export const Name = styled.span`
   font-size:2rem;
   color:${p => p.theme.text.lightwhite};
 `
-
-export const ArrowArea = styled.div`
-  display:grid;
-  place-items:center;
-  background-color:${p => p.theme.pallete.projectLink};
-  width:6.4rem;
-  height:6.4rem;
-  border-radius:6.4rem;
-
-  svg {
-    width:2.4rem;
-    height:2.4rem;
-  }
-
-  @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    width:5.4rem;
-    height:5.4rem;
-  }
-
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    transform:translateX(50%);
-  }
-`

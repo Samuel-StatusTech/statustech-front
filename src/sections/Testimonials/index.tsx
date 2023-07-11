@@ -3,6 +3,7 @@ import * as S from './styles'
 import testimonials from '../../utils/consts/testimonial'
 import TestimonialCard from '../../components/TestimonialCard'
 import { NextArrow, PrevArrow } from '../../utils/resumedImports/icons'
+import Sconsts from '../../styled/consts'
 
 
 const Testimonials = () => {
@@ -24,26 +25,40 @@ const Testimonials = () => {
     const qnt = testimonials.length
 
     if (to === 'prev') {
-      let newId = (focusedItem === 0) ? qnt - 1 : focusedItem - 1
+      let newId = (focusedItem === 0) ? 0 : focusedItem - 1
       setFocusedItem(newId)
     } else if (to === 'next') {
-      let newId = (focusedItem === qnt - 1) ? 0 : focusedItem + 1
+      let newId = (focusedItem === qnt - 1) ? qnt - 1 : focusedItem + 1
       setFocusedItem(newId)
     }
   }
 
   const handleListScroll = useCallback(() => {
     const el = listRef.current
+    const windowSize = document.body.clientWidth
 
     if (el) {
       const sl = el.scrollLeft
       const sw = el.scrollWidth
 
       const fs = getFontsize()
-      const cardSize = (77.4 * fs)
-      const paddingSize = (6.5 * fs)
+      const cardSize = () => {
+        // default, desktop
+        let value = 77.4 * fs
 
-      const fullSize = sw - cardSize + paddingSize
+        // tablet
+        if (windowSize < Sconsts.breakpoints.tablet) value = windowSize - 20 * fs
+
+        // cell
+        if (windowSize < Sconsts.breakpoints.tablet) value = windowSize - 6 * fs
+
+
+        return value
+      }
+
+      const paddingSize = ((windowSize < Sconsts.breakpoints.tablet ? 1.6 : 6.5) * fs)
+
+      const fullSize = sw - cardSize() + paddingSize
       const percentage = (sl / fullSize) * 100
 
       setMlPercent(percentage)
@@ -77,7 +92,10 @@ const Testimonials = () => {
             percent={((focusedItem + 1) / testimonials.length) * 100}
             mlPercent={mlPercent}
           />
-          <S.ButtonsArea>
+          <S.ButtonsArea
+            prevDisabled={focusedItem === 0}
+            nextDisabled={focusedItem === testimonials.length - 1}
+          >
             <PrevArrow onClick={() => handleChange('prev')} />
             <NextArrow onClick={() => handleChange('next')} />
           </S.ButtonsArea>
