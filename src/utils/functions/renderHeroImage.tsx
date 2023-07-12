@@ -1,6 +1,5 @@
 import Sconsts from "../../styled/consts"
-import { HeroImage, MobileHero, TabletHero } from '../resumedImports/images'
-import { ReactComponent as HeroIcon } from '../../assets/icons/hero.svg'
+import { ContactImage, HeroImage, MobileHero, TabletHero } from '../resumedImports/images'
 
 
 export const renderImage = () => {
@@ -13,15 +12,13 @@ export const renderImage = () => {
     cell: windowSize <= Sconsts.breakpoints.cellphone
   }
 
-  return (size.desktop) ? (
+  return (
     <img
-      src={HeroImage}
+      src={(size.desktop) ? HeroImage : ContactImage}
       alt='Soluções digitais'
-      width={630}
-      height={730}
+      width={(size.desktop) ? 630 : (size.tablet) ? 550 : 304}
+      height={(size.desktop) ? 730 : (size.tablet) ? 614 : 340}
     />
-  ) : (
-    <HeroIcon width={304} height={340} />
   )
 
 }
