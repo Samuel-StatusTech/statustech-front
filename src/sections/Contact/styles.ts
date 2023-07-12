@@ -73,7 +73,6 @@ export const FieldArea = styled.div<{ showingError: boolean; }>`
     font-size:1.6rem;
     margin-left:3.2rem;
     color:${({ theme }) => theme.pallete.red};
-    font-family:Poppins-Medium;
     font-weight:500;
   }
 `

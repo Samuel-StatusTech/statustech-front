@@ -88,7 +88,6 @@ export const FiltersRow = styled.div`
 
 export const FilterItem = styled.div<{ active: boolean; }>`
   font-size:2rem;
-  font-family:${p => p.active ? 'Poppins-Medium' : 'Poppins'};
   font-weight:${p => p.active ? '700' : 'normal'};
   color:${p => p.active ? p.theme.text.lightwhite : p => p.theme.text.lightgrey};
   padding:1rem;
