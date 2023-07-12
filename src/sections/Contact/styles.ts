@@ -176,6 +176,12 @@ export const CaptchaArea = styled.div`
     width:fit-content;
     max-width:unset;
   }
+
+  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
+    width:100%;
+    justify-content:space-between;
+    min-width: fit-content;
+  }
 `
 
 export const CaptchaCheck = styled.div`
@@ -198,4 +204,10 @@ export const CaptchaCheck = styled.div`
       height:1.6rem;
     }
   }
+`
+
+export const CaptchaLabel = styled.div`
+  display:flex;
+  align-items:center;
+  gap: 1.4rem;
 `

@@ -147,10 +147,12 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
             </S.FieldArea>
             <S.SendArea>
               <S.CaptchaArea onClick={() => setIsRobot(!isRobot)}>
-                <S.CaptchaCheck>
-                  {isRobot ? null : <Check />}
-                </S.CaptchaCheck>
-                <span>Não sou um robô</span>
+                <S.CaptchaLabel>
+                  <S.CaptchaCheck>
+                    {isRobot ? null : <Check />}
+                  </S.CaptchaCheck>
+                  <span>Não sou um robô</span>
+                </S.CaptchaLabel>
                 <Captcha />
               </S.CaptchaArea>
               <Button disabled={isSendDisabled} text='Enviar mensagem' onClick={handleSend} />
