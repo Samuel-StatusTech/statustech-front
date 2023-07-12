@@ -29,7 +29,7 @@ const ProjectItem = ({ info }: Props) => {
         alt={info.name}
         loading='lazy'
         width={(window.document.body.clientWidth / 100) * 80}
-        height={''}
+        height={((window.document.body.clientWidth / 100) * 80) * 1.29}
       />
       <S.Content>
         <S.ProjectDetails>
