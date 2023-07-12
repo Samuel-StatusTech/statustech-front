@@ -20,11 +20,11 @@ const ProjectItem = ({ info }: Props) => {
 
   useEffect(() => {
     document.querySelectorAll(".portfolioProject")[0].classList.add('projectFocused')
-  },)
+  }, [])
 
   return (
     <S.Project className='portfolioProject' onClick={handleClick} ref={thisEl}>
-      <S.Thumb src={info.thumb} alt={info.name} loading='lazy' />
+      <S.Thumb src={info.thumb} alt={info.name} loading='lazy' width="100%" height="auto" />
       <S.Content>
         <S.ProjectDetails>
           <S.Client>{info.client}</S.Client>

@@ -18,7 +18,6 @@ export const renderImage = () => {
       alt='Soluções digitais'
       width={(size.desktop) ? 630 : (size.tablet) ? 550 : 304}
       height={(size.desktop) ? 730 : (size.tablet) ? 614 : 340}
-      loading="lazy"
     />
   )
 

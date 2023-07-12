@@ -111,7 +111,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
     <S.Section ref={ref}>
       <S.Content className='container'>
         <S.ImageArea>
-          <img src={ContactImage} alt='Entre em contato' />
+          <img src={ContactImage} alt='Entre em contato' loading='lazy' />
         </S.ImageArea>
         <S.FormArea>
           <h1 className='sectionTitle'>Contato</h1>

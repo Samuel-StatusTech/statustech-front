@@ -39,7 +39,7 @@ const About = forwardRef<HTMLElement, Props>((props, ref) => {
             </S.QualitiesList>
           </S.Texts>
           <S.SectionImg>
-            <img src={AboutImage} alt='Inovação, Qualidade e Rresponsabilidade social' />
+            <img src={AboutImage} alt='Inovação, Qualidade e Rresponsabilidade social' loading='lazy' />
           </S.SectionImg>
           <S.DataBox>
             <S.Dinfo>
