@@ -7,7 +7,7 @@ type Props = {
   ref: React.ForwardRefExoticComponent<HTMLElement>;
 }
 
-const Hero = forwardRef<HTMLElement, Props>(({ }, ref) => {
+const Hero = forwardRef<HTMLElement, Props>((props, ref) => {
 
 
   return (
@@ -19,7 +19,7 @@ const Hero = forwardRef<HTMLElement, Props>(({ }, ref) => {
           <p className='sectionDescription'>Somos uma empresa especializada em criação de sites, aplicativos, dispositivos inteligentes e sistemas web.</p>
         </S.Texts>
         <S.ImageWrapper>
-          <img src={HeroImage} alt='Soluções digitais' loading='lazy' />
+          <img src={HeroImage} alt='Soluções digitais' width={630} height={730} />
         </S.ImageWrapper>
       </S.Content>
     </S.Section>
