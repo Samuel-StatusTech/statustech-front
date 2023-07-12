@@ -5,16 +5,19 @@
       "headers": [
         {
           "key": "Vercel-CDN-Cache-Control",
-          "value": "public, max-age=31536000, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
-      "headers": [
+          "value": "public, max-age=31536000"
+        },
         {
-          "key": "Vercel-CDN-Cache-Control",
-          "value": "public, max-age=31536000, must-revalidate"
+          "key": "CDN-Cache-Control",
+          "value": "max-age=3600"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key":"mininumCacheTTL",
+          "value":"2628288"
         }
       ]
     }
