@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react'
 import * as S from './styles'
 import { HeroImage, MobileHero, TabletHero } from '../../utils/resumedImports/images'
-import Sconsts from '../../styled/consts';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Sconsts from '../../styled/consts'
 
 
 type Props = {
@@ -22,13 +21,11 @@ const Hero = forwardRef<HTMLElement, Props>((props, ref) => {
     }
 
     return (
-      <LazyLoadImage
+      <img
         src={(size.desktop) ? HeroImage : (size.tablet) ? TabletHero : MobileHero}
         alt='Soluções digitais'
         width={(size.desktop) ? 630 : (size.tablet) ? 550 : 304}
         height={(size.desktop) ? 730 : (size.tablet) ? 614 : 340}
-        effect='blur'
-        placeholderSrc={(size.desktop) ? HeroImage : (size.tablet) ? TabletHero : MobileHero}
       />
     )
 
