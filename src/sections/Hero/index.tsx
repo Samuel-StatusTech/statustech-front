@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import * as S from './styles'
-import { HeroImage } from '../../utils/resumedImports/images'
+import { HeroImage, MobileHero, TabletHero } from '../../utils/resumedImports/images'
 import Sconsts from '../../styled/consts';
 
 
@@ -9,6 +9,27 @@ type Props = {
 }
 
 const Hero = forwardRef<HTMLElement, Props>((props, ref) => {
+
+  const renderImage = () => {
+    const windowSize = window.document.body.clientWidth
+
+    const size = {
+      desktop: windowSize > Sconsts.breakpoints.tablet,
+      tablet: windowSize <= Sconsts.breakpoints.tablet &&
+        windowSize > Sconsts.breakpoints.cellphone,
+      cell: windowSize <= Sconsts.breakpoints.cellphone
+    }
+
+    return (
+      <img
+        src={(size.desktop) ? HeroImage : (size.tablet) ? TabletHero : MobileHero}
+        alt='Soluções digitais'
+        width={(size.desktop) ? 630 : (size.tablet) ? 550 : 304}
+        height={(size.desktop) ? 730 : (size.tablet) ? 614 : 340}
+      />
+    )
+
+  }
 
 
   return (
@@ -20,12 +41,7 @@ const Hero = forwardRef<HTMLElement, Props>((props, ref) => {
           <p className='sectionDescription'>Somos uma empresa especializada em criação de sites, aplicativos, dispositivos inteligentes e sistemas web.</p>
         </S.Texts>
         <S.ImageWrapper>
-          <img
-            src={HeroImage}
-            alt='Soluções digitais'
-            width={window.document.body.clientWidth > Sconsts.breakpoints.tablet ? 630 : 304}
-            height={window.document.body.clientWidth > Sconsts.breakpoints.tablet ? 730 : 340}
-          />
+          {renderImage()}
         </S.ImageWrapper>
       </S.Content>
     </S.Section>

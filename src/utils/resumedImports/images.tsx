@@ -1,4 +1,6 @@
 import HeroImage from "../../assets/images/hero.webp"
+import TabletHero from "../../assets/images/tablet_hero.webp"
+import MobileHero from "../../assets/images/mobile_hero.webp"
 import AboutImage from "../../assets/images/necessities.webp"
 import FaqImage from "../../assets/images/faq.webp"
 import ContactImage from "../../assets/images/contact.webp"
@@ -16,6 +18,8 @@ import TestImg2 from "../../assets/images/testimg2.webp"
 
 export {
   HeroImage,
+  TabletHero,
+  MobileHero,
   AboutImage,
   FaqImage,
   ContactImage,
