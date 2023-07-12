@@ -23,7 +23,7 @@ const Faq = forwardRef<HTMLElement, Props>((props, ref) => {
             <h1 className='sectionTitle'>Perguntas frequentes</h1>
           </S.Titles>
           <S.ImageContainer>
-            <img src={FaqImage} alt='FAQ' />
+            <img src={FaqImage} alt='FAQ' loading='lazy' />
           </S.ImageContainer>
         </S.Top>
         <S.ListArea>

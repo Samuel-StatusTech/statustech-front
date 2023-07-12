@@ -14,7 +14,7 @@ const TestimonialCard = ({ info }: Props) => {
     <S.Card>
       <S.Top>
         <S.ImgBg>
-          <img src={info.image} alt={info.name} />
+          <img src={info.image} alt={info.name} loading='lazy' />
         </S.ImgBg>
         <S.Info>
           <S.Name>{info.name}</S.Name>

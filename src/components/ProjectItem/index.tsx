@@ -24,7 +24,13 @@ const ProjectItem = ({ info }: Props) => {
 
   return (
     <S.Project className='portfolioProject' onClick={handleClick} ref={thisEl}>
-      <S.Thumb src={info.thumb} alt={info.name} loading='lazy' width="100%" height="auto" />
+      <S.Thumb
+        src={info.thumb}
+        alt={info.name}
+        loading='lazy'
+        width={(window.document.body.clientWidth / 100) * 80}
+        height={''}
+      />
       <S.Content>
         <S.ProjectDetails>
           <S.Client>{info.client}</S.Client>
