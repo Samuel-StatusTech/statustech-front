@@ -23,7 +23,8 @@ const ProjectItem = ({ info }: Props) => {
   },)
 
   return (
-    <S.Project bg={info.thumb} className='portfolioProject' onClick={handleClick} ref={thisEl}>
+    <S.Project className='portfolioProject' onClick={handleClick} ref={thisEl}>
+      <S.Thumb src={info.thumb} alt={info.name} loading='lazy' />
       <S.Content>
         <S.ProjectDetails>
           <S.Client>{info.client}</S.Client>

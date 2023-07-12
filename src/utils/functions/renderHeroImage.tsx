@@ -1,5 +1,5 @@
 import Sconsts from "../../styled/consts"
-import { ContactImage, HeroImage, MobileHero, TabletHero } from '../resumedImports/images'
+import { HeroImage, MobileHero, TabletHero } from '../resumedImports/images'
 
 
 export const renderImage = () => {
@@ -14,10 +14,11 @@ export const renderImage = () => {
 
   return (
     <img
-      src={(size.desktop) ? HeroImage : ContactImage}
+      src={(size.desktop) ? HeroImage : (size.tablet) ? TabletHero : MobileHero}
       alt='Soluções digitais'
       width={(size.desktop) ? 630 : (size.tablet) ? 550 : 304}
       height={(size.desktop) ? 730 : (size.tablet) ? 614 : 340}
+      loading="lazy"
     />
   )
 

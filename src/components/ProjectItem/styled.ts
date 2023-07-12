@@ -2,11 +2,7 @@ import styled from "styled-components"
 import Sconsts from "../../styled/consts";
 
 
-export const Project = styled.div<{ bg: string; }>`
-  background-image:url(${p => p.bg});
-  background-position:center;
-  background-size:cover;
-  padding:3.3rem;
+export const Project = styled.div`
   aspect-ratio:1/1.29;
   cursor:pointer;
   display:flex;
@@ -28,15 +24,21 @@ export const Project = styled.div<{ bg: string; }>`
   }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    // min-height:45.6rem;
     min-height:unset;
     height:fit-content;
     min-width:80vw;
-    padding:2rem;
   }
 `
 
+export const Thumb = styled.img`
+  width: 100%;
+`
+
 export const Content = styled.div`
+  position: absolute;
+  right: 3.3rem;
+  bottom: 3.3rem;
+  left: 3.3rem;
   background-color:${p => p.theme.pallete.bodybg};
   padding:3.3rem;
   display:flex;
@@ -48,6 +50,9 @@ export const Content = styled.div`
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
     padding:2rem 0 2rem 3rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
   }
 `
 
