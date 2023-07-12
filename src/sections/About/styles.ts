@@ -64,64 +64,7 @@ export const QualitiesList = styled.div`
   gap:5rem;
 `
 
-export const Item = styled.div`
-  display:flex;
-  flex-direction:column;
-  gap:1rem;
-`
 
-export const ItemTitle = styled.div`
-  display:flex;
-  gap:1.5rem;
-
-  svg {
-    width:2rem;
-    height:auto;
-  }
-`
-
-export const QualityName = styled.h2`
-  font-size:2.8rem;
-  line-height:135%;
-  font-family:Poppins;
-  font-weight:300;
-  color:${p => p.theme.text.lightwhite};
-  white-space:nowrap;
-
-  @media (min-width:640px) AND (max-width:${Sconsts.breakpoints.tablet}px) {
-    font-size:2.2rem;
-  }
-
-  @media(max-width:${Sconsts.breakpoints.cellphone}px) {
-    font-size:2.0rem;
-    font-family:Poppins;
-    font-weight:normal;
-  }
-`
-
-export const ItemDesc = styled.span`
-  margin-left:3.5rem;
-  width:80%;
-  font-size:2rem;
-  line-height:155%;
-  color:${p => p.theme.text.lightgrey};
-
-  @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    width:48%;
-  }
-
-  @media (min-width:640px) AND (max-width:${Sconsts.breakpoints.tablet}px) {
-    font-size:1.6rem;
-  }
-
-  @media (max-width:540px) {
-    width:90%;
-  }
-
-  @media(max-width:${Sconsts.breakpoints.cellphone}px) {
-    font-size:1.6rem;
-  }
-`
 
 export const SectionImg = styled.div`
   flex:7;
@@ -198,9 +141,7 @@ export const Dnumber = styled.span`
   font-size:6.4rem;
   font-family:Poppins-Bold;
   line-height:8.64rem;
-  background:${p => p.theme.pallete.gradient};
   -webkit-text-fill-color:transparent;
-  -webkit-background-clip:text;
   
   @media (max-width:${Sconsts.breakpoints.tablet}px) {
     font-size:4rem;
@@ -214,7 +155,7 @@ export const Dnumber = styled.span`
 
 export const Dtag = styled.span`
   font-size:2rem;
-  color:${p => p.theme.text.lightgrey};
+  color:${({ theme }) => theme.text.lightgrey};
   white-space:nowrap;
 
   @media (max-width:${Sconsts.breakpoints.tablet}px) {

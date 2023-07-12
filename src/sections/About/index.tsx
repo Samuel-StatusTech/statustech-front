@@ -1,14 +1,15 @@
 import React, { forwardRef } from 'react'
 import * as S from './styles'
-import { AboutBg, Bullet } from '../../utils/resumedImports/icons'
+import { AboutBg } from '../../utils/resumedImports/icons'
 import { AboutImage } from '../../utils/resumedImports/images'
+import AboutQuality from '../../components/AboutQuality'
 
 
 type Props = {
   ref: React.ForwardRefExoticComponent<HTMLElement>;
 }
 
-const About = forwardRef<HTMLElement, Props>(({}, ref) => {
+const About = forwardRef<HTMLElement, Props>((props, ref) => {
 
 
   return (
@@ -23,27 +24,18 @@ const About = forwardRef<HTMLElement, Props>(({}, ref) => {
           <S.Texts>
             <p className='sectionDescription'>Com anos de experiência em criação de soluções tecnológicas, oferecemos opções personalizadas e inovadoras. Além disso, nossa equipe altamente capacitada garante suporte técnico contínuo para garantir o sucesso do seu negócio.</p>
             <S.QualitiesList>
-              <S.Item>
-                <S.ItemTitle>
-                  <Bullet />
-                  <S.QualityName>Inovação</S.QualityName>
-                </S.ItemTitle>
-                <S.ItemDesc>Buscamos alternativas inovadoras para os desafios tecnológicos modernos.</S.ItemDesc>
-              </S.Item>
-              <S.Item>
-                <S.ItemTitle>
-                  <Bullet />
-                  <S.QualityName>Qualidade</S.QualityName>
-                </S.ItemTitle>
-                <S.ItemDesc>Produtos e serviços de alta qualidade que atendam suas expectativas.</S.ItemDesc>
-              </S.Item>
-              <S.Item>
-                <S.ItemTitle>
-                  <Bullet />
-                  <S.QualityName>Responsabilidade social</S.QualityName>
-                </S.ItemTitle>
-                <S.ItemDesc>Ética e responsabilidade no impacto ambiental e social de nossas ações.</S.ItemDesc>
-              </S.Item>
+              <AboutQuality
+                name={"Inovação"}
+                desc={"Buscamos alternativas inovadoras para os desafios tecnológicos modernos."}
+              />
+              <AboutQuality
+                name={"Qualidade"}
+                desc={"Produtos e serviços de alta qualidade que atendam suas expectativas."}
+              />
+              <AboutQuality
+                name={"Responsabilidade social"}
+                desc={"Ética e responsabilidade no impacto ambiental e social de nossas ações."}
+              />
             </S.QualitiesList>
           </S.Texts>
           <S.SectionImg>
@@ -51,15 +43,15 @@ const About = forwardRef<HTMLElement, Props>(({}, ref) => {
           </S.SectionImg>
           <S.DataBox>
             <S.Dinfo>
-              <S.Dnumber>280+</S.Dnumber>
+              <S.Dnumber className='aboutNumber'>280+</S.Dnumber>
               <S.Dtag>Projetos</S.Dtag>
             </S.Dinfo>
             <S.Dinfo>
-              <S.Dnumber>280+</S.Dnumber>
+              <S.Dnumber className='aboutNumber'>280+</S.Dnumber>
               <S.Dtag>Clientes</S.Dtag>
             </S.Dinfo>
             <S.Dinfo>
-              <S.Dnumber>3500+</S.Dnumber>
+              <S.Dnumber className='aboutNumber'>3500+</S.Dnumber>
               <S.Dtag>Linhas de código</S.Dtag>
             </S.Dinfo>
           </S.DataBox>

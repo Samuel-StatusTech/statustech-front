@@ -59,8 +59,6 @@ export const ImageWrapper = styled.div`
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
 
-    img {
-      width:77vw;
-    }
+    img { width:77vw; }
   }
 `

@@ -7,9 +7,7 @@ export const Element = styled.a`
   padding:0 3rem;
   cursor:pointer;
   transition:-webkit-text-fill-color .3s;
-  background:${p => p.theme.pallete.gradient};
-  -webkit-text-fill-color:${p=>p.theme.text.primary};
-  -webkit-background-clip:text;
+  -webkit-text-fill-color:${({ theme }) => theme.text.primary};
   position:relative;
 
   &:after {
@@ -26,7 +24,7 @@ export const Element = styled.a`
     -webkit-text-fill-color:transparent;
 
     &:after {
-      background:${p => p.theme.pallete.gradient};
+      background:${({ theme }) => theme.pallete.gradient};
     }
   }
 `

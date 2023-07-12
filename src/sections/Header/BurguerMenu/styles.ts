@@ -40,7 +40,7 @@ export const MenuContainer = styled.div`
 
 export const MenuArea = styled.div`
   position:relative;
-  background:${p => p.theme.pallete.bodybg};
+  background:${({ theme }) => theme.pallete.bodybg};
   display:flex;
   flex-direction:column;
   height:100vh;

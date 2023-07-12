@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as S from './styles'
 import testimonials from '../../utils/consts/testimonial'
 import TestimonialCard from '../../components/TestimonialCard'
 import { NextArrow, PrevArrow } from '../../utils/resumedImports/icons'
-import Sconsts from '../../styled/consts'
-import { getFontsize } from '../../utils/functions/getFontSize'
+import { handleTestimonialScroll } from '../../utils/functions/testimonialScroll'
 
 
 const Testimonials = () => {
@@ -25,43 +24,16 @@ const Testimonials = () => {
     }
   }
 
-  const handleListScroll = useCallback(() => {
-    const el = listRef.current
-    const windowSize = document.body.clientWidth
-
-    if (el) {
-      const sl = el.scrollLeft
-      const sw = el.scrollWidth
-
-      const fs = getFontsize()
-      const cardSize = () => {
-        // default, desktop
-        let value = 77.4 * fs
-
-        // tablet
-        if (windowSize < Sconsts.breakpoints.tablet) value = windowSize - 20 * fs
-
-        // cell
-        if (windowSize < Sconsts.breakpoints.tablet) value = windowSize - 6 * fs
-
-
-        return value
-      }
-
-      const paddingSize = ((windowSize < Sconsts.breakpoints.tablet ? 1.6 : 6.5) * fs)
-
-      const fullSize = sw - cardSize() + paddingSize
-      const percentage = (sl / fullSize) * 100
-
-      setMlPercent(percentage)
-    }
-  }, [])
-
   useEffect(() => {
-    if (listRef.current) {
-      listRef.current.addEventListener('scroll', handleListScroll)
+    const listEl = listRef.current
+
+    if (listEl) {
+      listEl.addEventListener(
+        'scroll',
+        () => handleTestimonialScroll(listEl, setMlPercent)
+      )
     }
-  }, [listRef, handleListScroll])
+  }, [listRef])
 
 
   return (

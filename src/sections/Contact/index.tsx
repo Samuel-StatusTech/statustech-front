@@ -80,7 +80,6 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
           toggleModal(true, false)
         } else {
           toggleModal(true, true)
-
           cleanFields()
         }
       } else {
@@ -117,6 +116,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
         <S.FormArea>
           <h1 className='sectionTitle'>Contato</h1>
           <p className='sectionDescription'>Envia uma mensagem pra gente, nossa equipe vai entrar em contato o mais breve possível!</p>
+
           <S.FieldsArea>
             <S.FieldArea showingError={errors.name.is}>
               <S.Input
@@ -127,6 +127,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
               />
               <span>{errors.name.message}</span>
             </S.FieldArea>
+
             <S.FieldArea showingError={errors.email.is}>
               <S.Input
                 placeholder="E-mail"
@@ -136,6 +137,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
               />
               <span>{errors.email.message}</span>
             </S.FieldArea>
+
             <S.FieldArea showingError={errors.message.is}>
               <S.Textarea
                 placeholder="Sua mensagem"
@@ -145,6 +147,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
               />
               <span>{errors.message.message}</span>
             </S.FieldArea>
+
             <S.SendArea>
               <S.CaptchaArea onClick={() => setIsRobot(!isRobot)}>
                 <S.CaptchaLabel>
@@ -158,6 +161,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
               <Button disabled={isSendDisabled} text='Enviar mensagem' onClick={handleSend} />
             </S.SendArea>
           </S.FieldsArea>
+
         </S.FormArea>
       </S.Content>
     </S.Section>

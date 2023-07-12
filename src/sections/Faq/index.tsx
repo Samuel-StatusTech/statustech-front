@@ -10,7 +10,7 @@ type Props = {
   ref: React.ForwardRefExoticComponent<HTMLElement>;
 }
 
-const Faq = forwardRef<HTMLElement, Props>(({ }, ref) => {
+const Faq = forwardRef<HTMLElement, Props>((props, ref) => {
 
 
   return (

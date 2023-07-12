@@ -17,10 +17,7 @@ const BurguerMenu = ({ handlePickFn, sectionsRelations }: Props) => {
   const menuRef = useRef<HTMLDivElement | null>(null)
 
   const handleClick = () => {
-    const el = menuRef.current
-    if (el) {
-      el.classList.toggle('showing')
-    }
+    menuRef.current?.classList.toggle('showing')
   }
 
   const handlePick = (refName: string) => {

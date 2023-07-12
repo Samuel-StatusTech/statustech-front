@@ -71,9 +71,7 @@ export const Link = styled.a`
     height:2.4rem;
   }
 
-  &:hover {
-    text-decoration:underline;
-  }
+  &:hover { text-decoration:underline; }
 `
 
 export const Ways = styled(Links)`

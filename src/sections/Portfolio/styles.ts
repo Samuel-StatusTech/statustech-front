@@ -45,7 +45,6 @@ export const ProjectsGridWrapper = styled.div`
 `
 
 export const ProjectsGrid = styled.div`
-
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:2.5rem;
@@ -57,8 +56,6 @@ export const ProjectsGrid = styled.div`
     width:calc(100% + ${p => p.theme.containers.main});
     padding-right:6rem;
 
-    &::-webkit-scrollbar {
-      height:0;
-    }
+    &::-webkit-scrollbar { height:0; }
   }
 `

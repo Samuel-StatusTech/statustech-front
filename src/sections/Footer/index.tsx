@@ -1,4 +1,3 @@
-import React from 'react'
 import * as S from './styles'
 import { Location, LogoFull, Mail, Phone } from '../../utils/resumedImports/icons'
 

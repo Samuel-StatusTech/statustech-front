@@ -11,7 +11,7 @@ const Link = ({ text, onClick }: Props) => {
 
 
   return (
-    <S.Element onClick={onClick}>{text}</S.Element>
+    <S.Element onClick={onClick} className='headerLink'>{text}</S.Element>
   )
 
 }

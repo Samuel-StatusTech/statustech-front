@@ -5,7 +5,7 @@ const Global = createGlobalStyle`
 
   html {
     font-size:10px;
-    color:${p => p.theme.text.primary};
+    color:${({ theme }) => theme.text.primary};
     overflow-x:hidden;
   }
 
@@ -17,13 +17,13 @@ const Global = createGlobalStyle`
   }
 
   body {
-    background-color:${p => p.theme.pallete.bodybg};
+    background-color:${({ theme }) => theme.pallete.bodybg};
     overflow:hidden;
     position:relative;
   }
   
-  section { padding:0 ${p => p.theme.containers.main}; }
-  footer { padding:4rem ${p => p.theme.containers.main}; }
+  section { padding:0 ${({ theme }) => theme.containers.main}; }
+  footer { padding:4rem ${({ theme }) => theme.containers.main}; }
 
   .container {
     max-width:1310px;
@@ -34,17 +34,22 @@ const Global = createGlobalStyle`
     font-size:2.8rem;
     line-height:3.78rem;
     font-weight:normal;
-    background:${p => p.theme.pallete.gradient};
-    -webkit-text-fill-color:transparent;
-    -webkit-background-clip:text;
     background-size:inherit;
     position:absolute;
+    -webkit-text-fill-color:transparent;
+  }
+
+  .sectionName,
+  .headerLink,
+  .aboutNumber {
+    background:${({ theme }) => theme.pallete.gradient};
+    -webkit-background-clip:text;
+    background-clip: text;
   }
 
   .sectionTitle {
     font-size:6.4rem;
     line-height:8.64rem;
-    color:${p => p.theme.text.primary};
     font-family:Poppins-Bold;
     margin-top:3.78rem;
   }
@@ -52,7 +57,7 @@ const Global = createGlobalStyle`
   .sectionDescription {
     font-size:2rem;
     line-height:3.1rem;
-    color: ${p => p.theme.text.lightgrey};
+    color: ${({ theme }) => theme.text.lightgrey};
   }
   
   // smaller monitors
@@ -65,11 +70,12 @@ const Global = createGlobalStyle`
     html { font-size:10px; }
   }
 
-  @media (max-width:720px) { html { font-size:8px; } }
+  @media (max-width:720px) AND (min-width: ${Sconsts.breakpoints.cellphone}px) {
+    html { font-size:8px; }
+  }
 
   @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    html { font-size:10px; }
-    section { padding:${p => p.theme.containers.mobile}; }
+    section { padding:${({ theme }) => theme.containers.mobile}; }
     footer { padding:4.6rem 1.6rem 6.6rem 2.4rem; }
 
     .sectionName {

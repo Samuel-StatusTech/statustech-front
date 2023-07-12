@@ -72,7 +72,7 @@ export const FieldArea = styled.div<{ showingError: boolean; }>`
     transition:opacity .4s;
     font-size:1.6rem;
     margin-left:3.2rem;
-    color:${p => p.theme.pallete.red};
+    color:${({ theme }) => theme.pallete.red};
     font-family:Poppins-Medium;
     font-weight:500;
   }
@@ -190,7 +190,7 @@ export const CaptchaCheck = styled.div`
   width:2.4rem;
   height:2.4rem;
   border-radius:1px;
-  border:1px solid ${p => p.theme.text.lightgrey};
+  border:1px solid ${({ theme }) => theme.text.lightgrey};
 
   svg {
     width:1.8rem;

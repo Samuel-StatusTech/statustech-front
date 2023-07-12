@@ -25,7 +25,7 @@ export const Section = styled.section`
     width:81.1rem;
     height:81.1rem;
     border-radius:81.1rem;
-    background: ${p=>p.theme.pallete.gradient};
+    background: ${({ theme }) => theme.pallete.gradient};
     filter:blur(70px);
     opacity:.1;
   }
