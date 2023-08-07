@@ -3,14 +3,10 @@ import Sconsts from "../../styled/consts";
 
 
 export const Project = styled.div`
-  aspect-ratio:1/1.29;
   cursor:pointer;
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  justify-content:flex-end;
   transition:filter .4s;
   filter:saturate(0) brightness(.3);
+  aspect-ratio:1 / 1.29;
 
   &:hover,
   &.projectFocused {
@@ -32,6 +28,7 @@ export const Project = styled.div`
 
 export const Thumb = styled.img`
   width: 100%;
+  height: auto;
 `
 
 export const Content = styled.div`
