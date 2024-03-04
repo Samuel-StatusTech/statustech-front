@@ -47,11 +47,7 @@ const About = forwardRef<HTMLElement, Props>((props, ref) => {
               <S.Dtag>Projetos</S.Dtag>
             </S.Dinfo>
             <S.Dinfo>
-              <S.Dnumber className='aboutNumber'>280+</S.Dnumber>
-              <S.Dtag>Clientes</S.Dtag>
-            </S.Dinfo>
-            <S.Dinfo>
-              <S.Dnumber className='aboutNumber'>3500+</S.Dnumber>
+              <S.Dnumber className='aboutNumber'>100000+</S.Dnumber>
               <S.Dtag>Linhas de código</S.Dtag>
             </S.Dinfo>
           </S.DataBox>

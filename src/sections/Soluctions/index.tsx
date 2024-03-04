@@ -18,7 +18,7 @@ const Soluctions = forwardRef<HTMLElement, Props>((props, ref) => {
         <h1 className='sectionTitle'>Conte conosco para:</h1>
       </S.Content>
       <S.CardsArea className='container'>
-        {soluctions.map((s, k) => <SoluctionCard key={k} info={s} />)}
+        {soluctions.map((s, k) => <SoluctionCard key={k} info={s}/>)}
       </S.CardsArea>
     </S.Section>
   )

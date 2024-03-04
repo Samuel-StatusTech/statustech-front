@@ -42,7 +42,8 @@ export const SoluctionName = styled.h2`
 `
 
 export const SoluctionDescription = styled.span`
-font-size:1.6rem;
-line-height:2.4rem;
+  font-size:1.6rem;
+  line-height:2.4rem;
   color:rgba(255, 255, 255, 0.8);
+  white-space: pre-line;
 `

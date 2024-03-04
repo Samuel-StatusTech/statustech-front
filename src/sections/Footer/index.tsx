@@ -1,8 +1,18 @@
+import React from 'react'
 import * as S from './styles'
 import { Location, LogoFull, Mail, Phone } from '../../utils/resumedImports/icons'
 
 
-const Footer = () => {
+type Props = {
+  refs: {
+    services: React.MutableRefObject<HTMLElement | null>
+    about: React.MutableRefObject<HTMLElement | null>
+    faq: React.MutableRefObject<HTMLElement | null>
+    contact: React.MutableRefObject<HTMLElement | null>
+  }
+}
+
+const Footer = ({refs}: Props) => {
 
 
   return (
@@ -10,7 +20,7 @@ const Footer = () => {
       <S.Content className='container'>
         <S.CopyArea>
           <LogoFull />
-          <S.CompanyRole>Soluções web e mobile com tecnologia de ponta para atender sua empresa.</S.CompanyRole>
+          <S.CompanyRole>A Tecnologia que sua empresa precisa!</S.CompanyRole>
           <S.RightsArea>
             <span>2023 © StatusTech.</span><br />
             <span>Todos os direitos reservados.</span>
@@ -19,10 +29,10 @@ const Footer = () => {
         <S.LinksCol>
           <S.ColTitle>Serviços</S.ColTitle>
           <S.Links>
-            <S.Link>Aplicativos</S.Link>
-            <S.Link>Sistemas</S.Link>
-            <S.Link>Design</S.Link>
-            <S.Link>SmartThings</S.Link>
+            <S.Link href={'#apps'}>Aplicativos</S.Link>
+            <S.Link href={'#systems'}>Sistemas</S.Link>
+            <S.Link href={'#design'}>Design</S.Link>
+            <S.Link href={'#smart'}>SmartThings</S.Link>
           </S.Links>
         </S.LinksCol>
         <S.LinksCol>

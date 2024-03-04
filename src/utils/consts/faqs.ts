@@ -3,19 +3,19 @@ import { FaqType } from "../types/faqitem";
 const faqs: FaqType[] = [
   {
     question: 'Qual tecnologia será usada no meu projeto?',
-    answer: 'Cada projeto demanda um tipo te tecnologia diferente, e nossa equipe está preparada para analisar e propor a que mais se adequa a sua necessidade.'
+    answer: 'Entendemos que cada projeto possui requisitos únicos, e nossa equipe especializada está pronta para analisar e recomendar a tecnologia mais adequada às suas necessidades específicas.'
   },
   {
-    question: 'Onde meu projeto fica hospedado?',
-    answer: 'Cada projeto demanda um tipo te tecnologia diferente, e nossa equipe está preparada para analisar e propor a que mais se adequa a sua necessidade.'
+    question: 'Onde meu projeto será hospedado?',
+    answer: 'Buscamos uma hospedagem de qualidade em servidores confiáveis e seguros, proporcionando a estabilidade e o desempenho necessários para o sucesso do seu projeto.'
   },
   {
-    question: 'Em quais plataformas meu projeto vai funcionar?',
-    answer: 'Cada projeto demanda um tipo te tecnologia diferente, e nossa equipe está preparada para analisar e propor a que mais se adequa a sua necessidade.'
+    question: 'Em quais plataformas meu projeto estará disponível?',
+    answer: 'Nosso objetivo é garantir a acessibilidade do seu projeto em diversas plataformas, abrangendo desde dispositivos móveis até desktops, para proporcionar uma experiência completa e satisfatória aos usuários.'
   },
   {
-    question: 'Em quanto tempo meu sistema vai ficar pronto?',
-    answer: 'Cada projeto demanda um tipo te tecnologia diferente, e nossa equipe está preparada para analisar e propor a que mais se adequa a sua necessidade.'
+    question: 'Qual é o prazo de entrega para o meu projeto?',
+    answer: 'O prazo de conclusão pode variar dependendo da sua complexidade e dos requisitos específicos do projeto. Nossa equipe está comprometida em trabalhar de forma eficiente para entregar seu projeto dentro do prazo acordado, mantendo sempre a qualidade do produto final.'
   },
 ]
 

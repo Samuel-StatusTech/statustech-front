@@ -115,7 +115,7 @@ const Contact = forwardRef<HTMLElement, Props>(({ toggleModal }, ref) => {
         </S.ImageArea>
         <S.FormArea>
           <h1 className='sectionTitle'>Contato</h1>
-          <p className='sectionDescription'>Envia uma mensagem pra gente, nossa equipe vai entrar em contato o mais breve possível!</p>
+          <p className='sectionDescription'>Envie-nos uma mensagem e nossa equipe entrará em contato o mais breve possível para ajudá-lo!</p>
 
           <S.FieldsArea>
             <S.FieldArea showingError={errors.name.is}>

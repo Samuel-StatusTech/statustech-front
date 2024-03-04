@@ -11,7 +11,7 @@ const SoluctionCard = ({ info }: Props) => {
 
 
   return (
-    <S.Card>
+    <S.Card id={info.tag}>
       {<info.icon />}
       <S.CardInfo>
         <S.SoluctionName>{info.name}</S.SoluctionName>

@@ -3,34 +3,42 @@ import { Apps, Aws, Design, Landings, Smart, Systems } from "../resumedImports/i
 
 const soluctions: Soluction[] = [
   {
+    tag: 'apps',
     icon: Apps,
     name: 'Aplicativos Web e Mobile',
-    description: 'Desenvolvimento de aplicativos e ferramentas que podem ser acessadas por dispositivos móveis, pela web ou por ambos.'
+    description: 'Desenvolvimento de soluções personalizadas para dispositivos móveis e web, garantindo inovação e qualidade em cada projeto.'
   },
   {
+    tag: 'systems',
     icon: Systems,
     name: 'Sistemas de Gestão',
-    description: 'Sistema de gestão de produtos, empresas, educação... Sua necessidade de um painel administrativo será atendida.'
+    description: `Oferecemos sistemas de gestão completos para produtos, empresas e setores variados.
+    Atenda todas as suas necessidades com um painel administrativo eficiente e personalizado.
+    Simplifique sua gestão conosco!`
   },
   {
+    tag: 'sites',
     icon: Landings,
-    name: 'Sites e Landing pages',
-    description: 'Criação de websites completos para os mais diversos fins, seja na divulgação de empresas, produtos ou lançamentos em Landing pages.'
+    name: 'Sites e Landing Pages',
+    description: 'Potencialize sua presença online com nossos Websites e Landing Pages personalizadas! Criamos soluções sob medida para divulgar sua marca, produtos e serviços de forma atrativa.'
   },
   {
+    tag: 'design',
     icon: Design,
     name: 'Design e Branding',
-    description: 'Criação de logotipos, identidades visuais, peças de comunicação visual e serviço completo de branding para uma nova marca ou redesign.'
+    description: 'Desenvolvemos logotipos, identidades visuais e peças de comunicação visual sob medida, oferecendo um serviço completo de branding para marcas novas ou em processo de redesign.'
   },
   {
+    tag: 'smart',
     icon: Smart,
     name: 'Smart Things',
-    description: 'Integração do seu negócio com dispositivos inteligentes, via aplicativo ou web. Controle de acessos e funcionalidades na palma da mão.'
+    description: 'Facilite a integração do seu negócio com dispositivos inteligentes através de nosso aplicativo ou plataforma web, colocando o controle de acessos e funcionalidades diretamente na palma da sua mão.'
   },
   {
+    tag: 'aws',
     icon: Aws,
     name: 'AWS Hosting',
-    description: 'Soluções de hospedagem e gerenciamento de aplicativos na nuvem AWS para garantir desempenho, escalabilidade e segurança.'
+    description: 'Desempenho, escalabilidade e segurança garantidos. Simplifique sua infraestrutura e eleve sua empresa para o próximo nível na nuvem!'
   },
 ]
 

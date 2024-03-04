@@ -14,9 +14,9 @@ const Hero = forwardRef<HTMLElement, Props>((props, ref) => {
     <S.Section ref={ref}>
       <S.Content className='container'>
         <S.Texts>
-          <h2 className='sectionName'>Soluções digitais</h2>
+          <h2 className='sectionName'>Soluções Digitais</h2>
           <h1 className='sectionTitle'>Com a tecnologia que você precisa!</h1>
-          <p className='sectionDescription'>Somos uma empresa especializada em criação de sites, aplicativos, dispositivos inteligentes e sistemas web.</p>
+          <p className='sectionDescription'>A Status Tech é uma empresa remota com mais de 10 anos de experiência, especializada em soluções tecnológicas como desenvolvimento de apps, websites e sistemas de gestão, pronta para impulsionar sua presença digital.</p>
         </S.Texts>
         <S.ImageWrapper>
           {renderImage()}

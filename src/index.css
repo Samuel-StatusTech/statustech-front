@@ -28,6 +28,10 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Poppins";
   -webkit-tap-highlight-color: transparent;
