@@ -73,7 +73,7 @@ const App = () => {
         refs={{
           services: soluctionsRef,
           about: aboutRef,
-          faq: aboutRef,
+          faq: faqRef,
           contact: contactRef,
         }}
       />

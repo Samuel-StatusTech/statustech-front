@@ -1,35 +1,33 @@
 import styled from "styled-components"
 import Sconsts from "../../styled/consts"
 
-
-
 export const Footer = styled.footer`
-  background-color:${p => p.theme.pallete.darkbg};  
+  background-color: ${(p) => p.theme.pallete.darkbg};
 `
 
 export const Content = styled.div`
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
 
   & * {
-    font-size:1.6rem;
-    color:${p => p.theme.text.lightgrey};
+    font-size: 1.6rem;
+    color: ${(p) => p.theme.text.lightgrey};
   }
 
-  @media (max-width:780px) {
-    flex-direction:column;
-    gap:2rem;
+  @media (max-width: 780px) {
+    flex-direction: column;
+    gap: 2rem;
   }
 `
 
 export const CopyArea = styled.div`
-  display:flex;
-  flex-direction:column;
-  max-width:35rem;
-  gap:1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 35rem;
+  gap: 1.5rem;
 
-  @media (max-width:780px) {
-    max-width:unset;
+  @media (max-width: 780px) {
+    max-width: unset;
   }
 `
 
@@ -38,53 +36,67 @@ export const CompanyRole = styled.span``
 export const RightsArea = styled.div``
 
 export const LinksCol = styled.div`
-  width:fit-content;
-  display:flex;
-  flex-direction:column;
-  gap:1.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
-  @media (max-width:${Sconsts.breakpoints.tablet}px) {
-    display:none;
+  @media (max-width: ${Sconsts.breakpoints.tablet}px) {
+    display: none;
   }
 `
 
 export const ColTitle = styled.span`
-  font-size:2rem;
-  color:${p => p.theme.text.lightwhite};
+  font-size: 2rem;
+  color: ${(p) => p.theme.text.lightwhite};
 `
 
 export const Links = styled.div`
-  display:flex;
-  flex-direction:column;
-  gap:1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `
 
 export const Link = styled.a`
-  text-decoration:none;
-  cursor:pointer;
+  text-decoration: none;
+  cursor: pointer;
 
-  display:flex;
-  gap:1rem;
+  display: flex;
+  gap: 1rem;
 
   svg {
-    width:2.4rem;
-    height:2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
-  &:hover { text-decoration:underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 export const Ways = styled(Links)`
-  gap:2.5rem;
+  gap: 2.5rem;
+`
+
+export const Way = styled.div`
+  text-decoration: none;
+
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 `
 
 export const ContactArea = styled.div`
-  width:fit-content;
-  display:flex;
-  flex-direction:column;
-  gap:1.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
-  @media (max-width:${Sconsts.breakpoints.cellphone}px) {
-    gap:3.2rem;
+  @media (max-width: ${Sconsts.breakpoints.cellphone}px) {
+    gap: 3.2rem;
   }
 `
